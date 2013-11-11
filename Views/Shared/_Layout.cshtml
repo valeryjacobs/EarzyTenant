@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html id="htmlRoot" class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title data-bind='value: firstName'></title>
+    <link rel="stylesheet" href="content/foundation.css">
+    <link rel="stylesheet" href="content/jquery-ui-1.10.3.custom.css">
+    <link href="~/Content/earzy.css" rel="stylesheet" />
+
+
+    <script type="text/javascript" src="scripts/vendor/custom.modernizr.js"></script>
+    <script type="text/javascript" src="scripts/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" src="scripts/knockout-2.2.1.js"></script>
+    <script type="text/javascript" src="scripts/knockout.mapping-latest.js"></script>
+    <script type="text/javascript" src="scripts/BlockBlobUpload.js"></script>
+    <script type="text/javascript" src="scripts/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function () {
+            function earzymodel(artist, title, album) {
+                this.artist = ko.observable(artist);
+                this.title = ko.observable(title);
+                this.album = ko.observable(album);
+                this.nosongs = ko.observable(0);
+                this.mp3 = ko.observable();
+                this.url = ko.observable();
+            };
+
+            var myvm = new earzymodel("-", "-", "-", 0);
+
+            ko.applyBindings(myvm);
+
+            var uriPrefix;
+            var uriSuffix;
+            var oTable;
+            var uri = 'api/tracks';
+
+            $(function () {
+                $("#jquery_jplayer_1").jPlayer({
+                    ready: function () {
+                        //$(this).jPlayer("setMedia", {
+                        //    mp3: "https://jacobsmedia.blob.core.windows.net/uploads/01%20Anguish.mp3?sr=c&si=media&sig=J5%2B5IqsN2TcwlLgEK%2FMF%2Ft7VVAb1qwG2eDvLybrddHU%3D" // Defines the m4v url
+                        //});
+                    },
+                    supplied: "mp3",
+                    wmode: "window",
+                    smoothPlayBar: true,
+                    keyEnabled: true,
+                    error: function (event) {
+                        var time = $("#jquery_jplayer_1").data().jPlayer.status.currentTime;
+                        if (time > 0) {
+                            $("#jquery_jplayer_1").jPlayer("play", time);
+                        }
+                        else {
+                            function Breath() {
+                                setTimeout(function () {
+                                    $("#jquery_jplayer_1").jPlayer("play", 0);
+                                }, 5000);
+                            }
+                        }
+                    }
+                });
+
+                $("#jquery_jplayer_1").bind($.jPlayer.event.ended + ".repeat", function () {
+                    var randomnumber = Math.floor(Math.random() * (myvm.nosongs() - +1));
+                    var row = oTable.fnGetData(randomnumber);
+
+                    myvm.artist(row.artist);
+                    myvm.title(row.title);
+                    myvm.album(row.album);
+                    myvm.mp3(row.mp3);
+                    var blobpath = myvm.mp3();
+                    if (blobpath.substring(blobpath.length - 4, blobpath.length) != ".mp3") {
+                        blobpath += ".mp3"
+                    }
+                    myvm.url(uriPrefix + blobpath + uriSuffix);
+
+                    $(this).jPlayer("setMedia", { mp3: myvm.url() });
+                    $(this).jPlayer("play");
+                });
+
+            });
+
+            $("#stopbutton").click(function () {
+                $("#jquery_jplayer_1").jPlayer("stop");
+            });
+
+
+
+            $.getJSON(uri)
+                .done(function (data) {
+
+                    myvm.nosongs(data.length);
+
+                    $('#tablecontainer').html('<table cellpadding="0" cellspacing="0" border="0" class="display" id="example"></table>');
+                    oTable = $('#example').dataTable({
+                        "bPaginate": true,
+                        "bLengthChange": false,
+                        "bFilter": true,
+                        "bInfo": false,
+                        "bAutoWidth": false,
+                        "bScrollCollapse": false,
+                        "sScrollY": "220px",
+                        "bProcessing": true,
+                        "sAjaxSource": 'api/tracks/',
+                        "sAjaxDataProp": "",
+                        "aoColumns": [
+                            {
+                                "mDataProp": "artist"
+                            },
+                            {
+                                "mDataProp": "title"
+                            },
+                              {
+                                  "mDataProp": "album"
+                              },
+                              {
+                                  "bVisible": false, "mDataProp": "mp3"
+                              }
+                        ]
+                    });
+
+                    $.getJSON('api/tracks/geturitemplate')
+                      .done(function (data) {
+                          uriPrefix = data.Prefix.substring(0, data.Prefix.length - 1);
+                          uriSuffix = data.Suffix;
+                          var accesSignature = data;
+
+
+
+                          $('#nosongs').live("click", function () {
+                              $.getJSON('api/tracks/GetFreshData')
+                              .done(function (data) {
+                                  var x = data;
+                              });
+                          });
+
+                          $('#example tbody td').live('click', function () {
+                              var aPos = oTable.fnGetPosition(this);
+                              var aData = oTable.fnGetData(aPos[3]);
+
+                              //ko.applyBindings(new myvm(aData[aPos[0]].artist, aData[aPos[0]].title, aData[aPos[0]].album)); data.artist = aData[aPos[0]].artist;
+                              myvm.artist(aData[aPos[0]].artist);
+                              myvm.title(aData[aPos[0]].title);
+                              myvm.album(aData[aPos[0]].album);
+                              myvm.mp3(aData[aPos[0]].mp3);
+                              var blobpath = aData[aPos[0]].mp3;
+                              if (blobpath.substring(blobpath.length - 4, blobpath.length) != ".mp3") {
+                                  blobpath += ".mp3"
+                              }
+                              myvm.url(uriPrefix + blobpath + uriSuffix);
+
+                              $("#jquery_jplayer_1").jPlayer("setMedia", { mp3: myvm.url() });
+                              $("#jquery_jplayer_1").jPlayer("play");
+                          });
+                      });
+
+                    var uriartitst = 'api/tracks/getartists';
+                    $.getJSON(uriartitst)
+                            .done(function (data) {
+                                var availableTags = data;
+
+                                //$("#artistssearch").autocomplete({
+                                //    source: availableTags
+                                //});
+
+                                //$("#auto").autocomplete({
+                                //    source: function (request, response) {
+                                //        var results = $.ui.autocomplete.filter(myarray, request.term);
+                                //        response(results.slice(0, 10));
+                                //    },
+                                //    select: function (event, ui) {
+                                //        alert('fdfd' + ui.item.value);
+                                //        return false;
+                                //    }
+                                //});
+
+                            });
+                });
+        });
+    </script>
+</head>
+
+<body>
+    @RenderBody()
+    <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+    <div id="jp_container_1" class="jp-audio">
+        <div class="jp-type-single">
+            <div class="jp-gui jp-interface">
+                <div class="row">
+                    <div class="large-4 columns">
+                        <h2><img src="Content/EarzyLogo.png" style="width:50px;padding-bottom:10px" />Earzy</h2>
+                    </div>
+                    <div class="large-8 columns">
+                        <div class="row">
+                            @*<div class="small-8 columns">
+                                    <div class="row">
+                                        <div class="small-8 columns">
+                                            <input type="file" id="FileInput" multiple="false" class="fileInput" />
+                                        </div>
+                                        <div class="small-4 columns">
+                                            <input type="button" id="upload" name="Upload" value="Upload" onclick="startUpload('FileInput', 1048576, 'uploadProgress', 'statusMessage', 'upload', 'cancel');"
+                                                   class="button" />
+                                            <input type="button" id="cancel" name="Cancel" value="Cancel" disabled="disabled"
+                                                   onclick="cancelUpload();" class="button" />
+                                        </div>
+                                    </div>
+
+
+                                </div>*@
+
+                        </div>
+
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <div class="large-8 columns">
+                                <div id="tablecontainer" style="padding:5px"></div>
+                            </div>
+                            <div class="large-4 columns">
+                                <div class="support-links" style="border-left: 1px solid #1f1f1f; padding: 5px; height:100%">
+                                    <p>Playlist: <strong>ALL</strong></p>
+
+                                </div>
+                            </div>
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-2 columns ">
+                            <div class="support-links">
+                                <p>Songs: <strong><a id="nosongs" data-bind="text: nosongs"></a></strong></p>
+                            </div>
+                        </div>
+                        <div class="large-6 columns">
+                            <div class="support-links" style="border-left:1px solid #1f1f1f; padding: 5px">
+                                <p>
+                                    <a href="#" class="tiny button"><img src="icons/Media-Rewind.png" style="height:32px" /></a>
+                                    <a href="#" class="small button"><img src="icons/Media-back.png" style="height:40px" /></a>
+                                    <a href="#" class="small button jp-play"><img src="icons/Media-Play.png" /></a>
+                                    <a href="#" class="small button jp-pause"><img src="icons/Media-Pause.png" /></a>
+                                    <a href="#" class="small button jp-stop"><img src="icons/Media-Stop.png" /></a>
+                                    <a href="#" class="small button"><img src="icons/Media-back.png" style="height:40px" /></a>
+                                    <a href="#" class="tiny button"><img src="icons/Media-Fast-Forward.png" style="height:32px" /></a>
+                                    <br />
+
+
+                                    <table style="width: 100%;background:black">
+                                        <tr>
+                                            <td><div class=" jp-current-time" style="color: white"></div></td>
+                                            <td><div class="jp-duration" style="width: 100%; text-align: right; color: white"></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+
+                                                <div class="jp-progress" style="position:static">
+
+                                                    <div class="jp-seek-bar" style="z-index:2000;">
+                                                        <div class="jp-play-bar"></div>
+                                                    </div>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="large-4 columns">
+                            <div class="support-links" style="border-left: 1px solid #1f1f1f; padding: 5px; height:inherit">
+                                <p>Artist: <strong><a data-bind="text: artist"></a></strong></p>
+                                <p>Song: <strong><a data-bind="attr: { href: url},text: title"></a></strong></p>
+                                <p>Album: <strong><a data-bind="text: album"></a></strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.write('<script src=' +
+            ('__proto__' in {} ? 'scripts/vendor/zepto' : 'scripts/vendor/jquery') +
+            '.js><\/script>')
+        </script>
+        <script src="scripts/foundation.min.js"></script>
+        <script>
+            $(document).foundation();
+        </script>
+        </div>
+</body>
+</html>
