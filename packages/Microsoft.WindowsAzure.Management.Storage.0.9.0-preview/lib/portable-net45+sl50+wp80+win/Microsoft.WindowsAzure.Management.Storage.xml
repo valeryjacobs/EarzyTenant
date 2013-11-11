@@ -1,0 +1,1513 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.WindowsAzure.Management.Storage</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.WindowsAzure.Management.Storage.Models.CheckNameAvailabilityResponse">
+            <summary>
+            The response to a storage account check name availability request
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.Models.CheckNameAvailabilityResponse.#ctor">
+            <summary>
+            Initializes a new instance of the CheckNameAvailabilityResponse
+            class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.CheckNameAvailabilityResponse.IsAvailable">
+            <summary>
+            The result of the availability request.  True if the name is
+            available, false otherwise
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.CheckNameAvailabilityResponse.Reason">
+            <summary>
+            The reason for unavailability, if the requested name is unavailable
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.Storage.Models.GeoRegionNames">
+            <summary>
+            The geographical region in which a storage account exists
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.Storage.Models.GeoRegionStatus">
+            <summary>
+            Indicates whether the storage region is available.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.Storage.Models.OperationStatus">
+            <summary>
+            The status of the asynchronous request.
+            </summary>
+        </member>
+        <member name="F:Microsoft.WindowsAzure.Management.Storage.Models.OperationStatus.InProgress">
+            <summary>
+            The asynchronous request is in progress.
+            </summary>
+        </member>
+        <member name="F:Microsoft.WindowsAzure.Management.Storage.Models.OperationStatus.Succeeded">
+            <summary>
+            The asynchronous request succeeded.
+            </summary>
+        </member>
+        <member name="F:Microsoft.WindowsAzure.Management.Storage.Models.OperationStatus.Failed">
+            <summary>
+            The asynchronous request failed.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountCreateParameters">
+            <summary>
+            Parameters supplied to the Create Storage Account operation.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountCreateParameters.#ctor">
+            <summary>
+            Initializes a new instance of the StorageAccountCreateParameters
+            class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountCreateParameters.ServiceName">
+            <summary>
+            Required. A name for the storage account that is unique within
+            Windows Azure. Storage account names must be between 3 and 24
+            characters in length and use numbers and lower-case letters only.
+            This name is the DNS prefix name and can be used to access blobs,
+            queues, and tables in the storage account.  For example:
+            http://ServiceName.blob.core.windows.net/mycontainer/
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountCreateParameters.Label">
+            <summary>
+            Required. A name for the storage account specified as
+            abase64-encoded string. The name may be up to 100 characters
+            inlength. The name can be used identify the storage account for
+            yourtracking purposes.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountCreateParameters.Description">
+            <summary>
+            Optional. A description for the storage account. The description
+            may be up to 1024 characters in length.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountCreateParameters.Location">
+            <summary>
+            Required if AffinityGroup is not specified. The location where the
+            storage account is created.  You can include either a Location or
+            AffinityGroup element in the request body, but not both. To list
+            available locations, use the List Locations operation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountCreateParameters.AffinityGroup">
+            <summary>
+            Required if Location is not specified. The name of an existing
+            affinity group in the specified subscription.  You can include
+            either a Location or AffinityGroup element in the request body,
+            but not both. To list available affinity groups, use the List
+            Affinity Groups operation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountCreateParameters.GeoReplicationEnabled">
+            <summary>
+            Optional. Specifies whether the storage account is created with the
+            geo-replication enabled. If the element is not included in the
+            request body, the default value is true. If set to true, the data
+            in the storage account is replicated across more than one
+            geographic location so as to enable resilience in the face of
+            catastrophic service loss.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountCreateParameters.ExtendedProperties">
+            <summary>
+            Optional. Represents the name of an extended storage account
+            property. Each extended property must have both a defined name and
+            value. You can have a maximum of 50 extended property name/value
+            pairs.  The maximum length of the Name element is 64 characters,
+            only alphanumeric characters and underscores are valid in the
+            Name, and the name must start with a letter. Attempting to use
+            other characters, starting the Name with a non-letter character,
+            or entering a name that is identical to that of another extended
+            property owned by the same storage account, will result in a
+            status code 400 (Bad Request) error.  Each extended property value
+            has a maximum length of 255 characters.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountGetKeysResponse">
+            <summary>
+            The primary and secondary access keys for a storage account.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountGetKeysResponse.#ctor">
+            <summary>
+            Initializes a new instance of the StorageAccountGetKeysResponse
+            class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountGetKeysResponse.Uri">
+            <summary>
+            The Service Management API request URI used to perform Get Storage
+            Account Properties requests against the storage account.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountGetKeysResponse.PrimaryKey">
+            <summary>
+            The primary access key for the storage account.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountGetKeysResponse.SecondaryKey">
+            <summary>
+            The secondary access key for the storage account.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountRegenerateKeysParameters">
+            <summary>
+            Parameters supplied to the Regenerate Keys operation.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountRegenerateKeysParameters.#ctor">
+            <summary>
+            Initializes a new instance of the
+            StorageAccountRegenerateKeysParameters class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountRegenerateKeysParameters.ServiceName">
+            <summary>
+            The name of the desired storage account.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountRegenerateKeysParameters.KeyType">
+            <summary>
+            Specifies which key to regenerate.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountRegenerateKeysResponse">
+            <summary>
+            The primary and secondary access keys for a storage account.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountRegenerateKeysResponse.#ctor">
+            <summary>
+            Initializes a new instance of the
+            StorageAccountRegenerateKeysResponse class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountRegenerateKeysResponse.Uri">
+            <summary>
+            The Service Management API request URI used to perform Get Storage
+            Account Properties requests against the storage account.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountRegenerateKeysResponse.PrimaryKey">
+            <summary>
+            The primary access key for the storage account.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountRegenerateKeysResponse.SecondaryKey">
+            <summary>
+            The secondary access key for the storage account.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountUpdateParameters">
+            <summary>
+            Parameters supplied to the Update Storage Account operation.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountUpdateParameters.#ctor">
+            <summary>
+            Initializes a new instance of the StorageAccountUpdateParameters
+            class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountUpdateParameters.Label">
+            <summary>
+            Optional. A name for the storage account that is base64-encoded.
+            The label may be up to 100 characters in length. The name can be
+            used identify the storage account for your tracking purposes.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountUpdateParameters.GeoReplicationEnabled">
+            <summary>
+            Optional. Enables or disables geo-replication on the specified the
+            storage. If set to true, the data in the storage account is
+            replicated across more than one geographic location so as to
+            enable resilience in the face of catastrophic service loss. If set
+            to false, geo-replication is disabled. If the element is not
+            included in the request body, the current value is left unchanged.
+            Important: If you have enabled geo-replication you can elect to
+            disable it by setting this element to false. When disabled, your
+            data is no longer replicated to a secondary data center and any
+            data in the secondary location will be removed.  Enabling
+            geo-replication once it has been disabled will result in the
+            storage account being billed for replicating the current copy of
+            data to the secondary data center. After the existing copy of the
+            data is replicated to the secondary data center, updates are
+            geo-replicated at no additional charge.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountUpdateParameters.ExtendedProperties">
+            <summary>
+            Optional. Represents the name of an extended storage account
+            property. Each extended property must have both a defined name and
+            value. You can have a maximum of 50 extended property name/value
+            pairs.  The maximum length of the Name element is 64 characters,
+            only alphanumeric characters and underscores are valid in the
+            Name, and the name must start with a letter. Attempting to use
+            other characters, starting the Name with a non-letter character,
+            or entering a name that is identical to that of another extended
+            property owned by the same storage account, will result in a
+            status code 400 (Bad Request) error.  Each extended property value
+            has a maximum length of 255 characters.  You can delete an
+            extended property by setting the value to NULL.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.Storage.Models.StorageKeyType">
+            <summary>
+            Describes the type of a storage key.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.Storage.Models.StorageOperationStatusResponse">
+            <summary>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or has
+            failed. Note that this status is distinct from the HTTP status code
+            returned for the Get Operation Status operation itself.  If the
+            asynchronous operation succeeded, the response body includes the HTTP
+            status code for the successful request.  If the asynchronous operation
+            failed, the response body includes the HTTP status code for the failed
+            request, and also includes error information regarding the failure.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.Models.StorageOperationStatusResponse.#ctor">
+            <summary>
+            Initializes a new instance of the StorageOperationStatusResponse
+            class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageOperationStatusResponse.Id">
+            <summary>
+            The request ID of the asynchronous request. This value is returned
+            in the x-ms-request-id response header of the asynchronous request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageOperationStatusResponse.Status">
+            <summary>
+            The status of the asynchronous request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageOperationStatusResponse.HttpStatusCode">
+            <summary>
+            The HTTP status code for the asynchronous request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageOperationStatusResponse.Error">
+            <summary>
+            If the asynchronous operation failed, the response body includes
+            the HTTP status code for the failed request, and also includes
+            error information regarding the failure.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.Storage.Models.StorageOperationStatusResponse.ErrorDetails">
+            <summary>
+            If the asynchronous operation failed, the response body includes
+            the HTTP status code for the failed request, and also includes
+            error information regarding the failure.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.Models.StorageOperationStatusResponse.ErrorDetails.#ctor">
+            <summary>
+            Initializes a new instance of the ErrorDetails class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageOperationStatusResponse.ErrorDetails.Code">
+            <summary>
+            The management service error code returned if the asynchronous
+            request failed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageOperationStatusResponse.ErrorDetails.Message">
+            <summary>
+            The management service error message returned if the
+            asynchronous request failed.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceGetResponse">
+            <summary>
+            The Get Storage Account Properties operation response.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceGetResponse.#ctor">
+            <summary>
+            Initializes a new instance of the StorageServiceGetResponse class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceGetResponse.Uri">
+            <summary>
+            The Service Management API request URI used to perform Get Storage
+            Account Properties requests against the storage account.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceGetResponse.ServiceName">
+            <summary>
+            The name of the storage account. This name is the DNS prefix name
+            and can be used to access blobs, queues, and tables in the storage
+            account.  For example, if the service name is MyStorageAccount you
+            could access the blob containers by calling:
+            http://MyStorageAccount.blob.core.windows.net/mycontainer/
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceGetResponse.Properties">
+            <summary>
+            Details about the storage account.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceGetResponse.ExtendedProperties">
+            <summary>
+            Optional. Represents the name of an extended storage account
+            property. Each extended property must have both a defined name and
+            value. You can have a maximum of 50 extended property name/value
+            pairs.  The maximum length of the Name element is 64 characters,
+            only alphanumeric characters and underscores are valid in the
+            Name, and the name must start with a letter. Attempting to use
+            other characters, starting the Name with a non-letter character,
+            or entering a name that is identical to that of another extended
+            property owned by the same storage account, will result in a
+            status code 400 (Bad Request) error.  Each extended property value
+            has a maximum length of 255 characters.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceGetResponse.Capabilities">
+            <summary>
+            Indicates if the storage account is able to perform virtual machine
+            related operations. If so, this element returns a string
+            containing PersistentVMRole. Otherwise, this element will not be
+            present.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceListResponse">
+            <summary>
+            The List Storage Accounts operation response.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceListResponse.#ctor">
+            <summary>
+            Initializes a new instance of the StorageServiceListResponse class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceListResponse.GetEnumerator">
+            <summary>
+            Gets the sequence of StorageServices.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceListResponse.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Gets the sequence of StorageServices.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceListResponse.StorageService">
+            <summary>
+            A Storage Service associated with your subscription.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceListResponse.StorageService.#ctor">
+            <summary>
+            Initializes a new instance of the StorageService class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceListResponse.StorageService.Uri">
+            <summary>
+            The Service Management API request URI used to perform Get
+            Storage Account Properties requests against the storage
+            account.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceListResponse.StorageService.ServiceName">
+            <summary>
+            The name of the storage account. This name is the DNS prefix
+            name and can be used to access blobs, queues, and tables in
+            the storage account.  For example, if the service name is
+            MyStorageAccount you could access the blob containers by
+            calling:
+            http://MyStorageAccount.blob.core.windows.net/mycontainer/
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceListResponse.StorageService.Properties">
+            <summary>
+            Details about the storage account.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceListResponse.StorageService.ExtendedProperties">
+            <summary>
+            Optional. Represents the name of an extended storage account
+            property. Each extended property must have both a defined name
+            and value. You can have a maximum of 50 extended property
+            name/value pairs.  The maximum length of the Name element is
+            64 characters, only alphanumeric characters and underscores
+            are valid in the Name, and the name must start with a letter.
+            Attempting to use other characters, starting the Name with a
+            non-letter character, or entering a name that is identical to
+            that of another extended property owned by the same storage
+            account, will result in a status code 400 (Bad Request) error.
+            Each extended property value has a maximum length of 255
+            characters.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceProperties">
+            <summary>
+            Details about a storage account.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceProperties.#ctor">
+            <summary>
+            Initializes a new instance of the StorageServiceProperties class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceProperties.Description">
+            <summary>
+            The user supplied description of the storage account.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceProperties.AffinityGroup">
+            <summary>
+            The affinity group with which this storage account is associated.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceProperties.Location">
+            <summary>
+            The geo-location specified when the storage account was created.
+            This property is only returned if the storage account is not
+            associated with an affinity group.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceProperties.Label">
+            <summary>
+            The user supplied name of the storage account returned as a base-64
+            encoded string. This name can be used identify the storage account
+            for your tracking purposes.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceProperties.Status">
+            <summary>
+            The status of the storage account at the time the operation was
+            called.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceProperties.Endpoints">
+            <summary>
+            The URLs that are used to perform a retrieval of a public blob,
+            queue, or table object.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceProperties.GeoReplicationEnabled">
+            <summary>
+            Indicates whether the data in the storage account is replicated
+            across more than one geographic location so as to enable
+            resilience in the face of catastrophic service loss. The value is
+            true if geo-replication is enabled; otherwise false.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceProperties.GeoPrimaryRegion">
+            <summary>
+            Indicates the primary geographical region in which the storage
+            account exists at this time.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceProperties.StatusOfGeoPrimaryRegion">
+            <summary>
+            Indicates whether the primary storage region is available.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceProperties.LastGeoFailoverTime">
+            <summary>
+            A timestamp that indicates the most recent instance of a failover
+            to the secondary region. In case of multiple failovers only the
+            latest failover date and time maintained. The format of the
+            returned timestamp is:
+            [4DigitYear]-[2DigitMonth]-[2DigitDay]T[2DigitMinute]:[2DigitSecond]:[7DigitsOfPrecision]Z.
+            LastGeoFailoverTime is not returned if there has not been an
+            instance of a failover.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceProperties.GeoSecondaryRegion">
+            <summary>
+            Indicates the geographical region in which the storage account is
+            being replicated.  The GeoSecondaryRegion element is not returned
+            if geo-replication is “off” for this account.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceProperties.StatusOfGeoSecondaryRegion">
+            <summary>
+            Indicates whether the secondary storage region is available.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceStatus">
+            <summary>
+            The status of the storage account at the time the operation was called.
+            </summary>
+        </member>
+        <member name="F:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceStatus.Created">
+            <summary>
+            The Storage Account had been created.
+            </summary>
+        </member>
+        <member name="F:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceStatus.Creating">
+            <summary>
+            The Storage Account is being created.
+            </summary>
+        </member>
+        <member name="F:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceStatus.ResolvingDns">
+            <summary>
+            The DNS name for the storage account is being propagated.
+            </summary>
+        </member>
+        <member name="F:Microsoft.WindowsAzure.Management.Storage.Models.StorageServiceStatus.Deleting">
+            <summary>
+            The Storage Account is being deleted.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.Storage.IStorageManagementClient">
+            <summary>
+            The Service Management API provides programmatic access to much of the
+            functionality available through the Management Portal. The Service
+            Management API is a REST API. All API operations are performed over
+            SSL and mutually authenticated using X.509 v3 certificates.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460799.aspx for
+            more information)
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.IStorageManagementClient.GetOperationStatusAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Get Operation Status operation returns the status of
+            thespecified operation. After calling an asynchronous operation,
+            you can call Get Operation Status to determine whether the
+            operation has succeeded, failed, or is still in progress.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460783.aspx
+            for more information)
+            </summary>
+            <param name='requestId'>
+            The request ID for the request you wish to track. The request ID is
+            returned in the x-ms-request-id response header for every request.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.IStorageManagementClient.Credentials">
+            <summary>
+            When you create a Windows Azure subscription, it is uniquely
+            identified by a subscription ID. The subscription ID forms part of
+            the URI for every call that you make to the Service Management
+            API.  The Windows Azure Service ManagementAPI use mutual
+            authentication of management certificates over SSL to ensure that
+            a request made to the service is secure.  No anonymous requests
+            are allowed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.IStorageManagementClient.BaseUri">
+            <summary>
+            The URI used as the base for all Service Management requests.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.IStorageManagementClient.StorageAccounts">
+            <summary>
+            The Service Management API includes operations for managing the
+            storage accounts beneath your subscription.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460790.aspx
+            for more information)
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.Storage.StorageManagementClientExtensions">
+            <summary>
+            The Service Management API provides programmatic access to much of the
+            functionality available through the Management Portal. The Service
+            Management API is a REST API. All API operations are performed over
+            SSL and mutually authenticated using X.509 v3 certificates.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460799.aspx for
+            more information)
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageManagementClientExtensions.GetOperationStatus(Microsoft.WindowsAzure.Management.Storage.IStorageManagementClient,System.String)">
+            <summary>
+            The Get Operation Status operation returns the status of
+            thespecified operation. After calling an asynchronous operation,
+            you can call Get Operation Status to determine whether the
+            operation has succeeded, failed, or is still in progress.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460783.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.Storage.IStorageManagementClient.
+            </param>
+            <param name='requestId'>
+            The request ID for the request you wish to track. The request ID is
+            returned in the x-ms-request-id response header for every request.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageManagementClientExtensions.GetOperationStatusAsync(Microsoft.WindowsAzure.Management.Storage.IStorageManagementClient,System.String)">
+            <summary>
+            The Get Operation Status operation returns the status of
+            thespecified operation. After calling an asynchronous operation,
+            you can call Get Operation Status to determine whether the
+            operation has succeeded, failed, or is still in progress.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460783.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.Storage.IStorageManagementClient.
+            </param>
+            <param name='requestId'>
+            The request ID for the request you wish to track. The request ID is
+            returned in the x-ms-request-id response header for every request.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.Storage.StorageManagementClient">
+            <summary>
+            The Service Management API provides programmatic access to much of the
+            functionality available through the Management Portal. The Service
+            Management API is a REST API. All API operations are performed over
+            SSL and mutually authenticated using X.509 v3 certificates.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460799.aspx for
+            more information)
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageManagementClient.#ctor">
+            <summary>
+            Initializes a new instance of the StorageManagementClient class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageManagementClient.#ctor(Microsoft.WindowsAzure.SubscriptionCloudCredentials,System.Uri)">
+            <summary>
+            Initializes a new instance of the StorageManagementClient class.
+            </summary>
+            <param name='credentials'>
+            When you create a Windows Azure subscription, it is uniquely
+            identified by a subscription ID. The subscription ID forms part of
+            the URI for every call that you make to the Service Management
+            API.  The Windows Azure Service ManagementAPI use mutual
+            authentication of management certificates over SSL to ensure that
+            a request made to the service is secure.  No anonymous requests
+            are allowed.
+            </param>
+            <param name='baseUri'>
+            The URI used as the base for all Service Management requests.
+            </param>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageManagementClient.#ctor(Microsoft.WindowsAzure.SubscriptionCloudCredentials)">
+            <summary>
+            Initializes a new instance of the StorageManagementClient class.
+            </summary>
+            <param name='credentials'>
+            When you create a Windows Azure subscription, it is uniquely
+            identified by a subscription ID. The subscription ID forms part of
+            the URI for every call that you make to the Service Management
+            API.  The Windows Azure Service ManagementAPI use mutual
+            authentication of management certificates over SSL to ensure that
+            a request made to the service is secure.  No anonymous requests
+            are allowed.
+            </param>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageManagementClient.GetOperationStatusAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Get Operation Status operation returns the status of
+            thespecified operation. After calling an asynchronous operation,
+            you can call Get Operation Status to determine whether the
+            operation has succeeded, failed, or is still in progress.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460783.aspx
+            for more information)
+            </summary>
+            <param name='requestId'>
+            The request ID for the request you wish to track. The request ID is
+            returned in the x-ms-request-id response header for every request.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.StorageManagementClient.Credentials">
+            <summary>
+            When you create a Windows Azure subscription, it is uniquely
+            identified by a subscription ID. The subscription ID forms part of
+            the URI for every call that you make to the Service Management
+            API.  The Windows Azure Service ManagementAPI use mutual
+            authentication of management certificates over SSL to ensure that
+            a request made to the service is secure.  No anonymous requests
+            are allowed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.StorageManagementClient.BaseUri">
+            <summary>
+            The URI used as the base for all Service Management requests.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.StorageManagementClient.StorageAccounts">
+            <summary>
+            The Service Management API includes operations for managing the
+            storage accounts beneath your subscription.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460790.aspx
+            for more information)
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations">
+            <summary>
+            The Service Management API includes operations for managing the storage
+            accounts beneath your subscription.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460790.aspx for
+            more information)
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.CheckNameAvailabilityAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Check Name Availability operation checks if a storage account
+            name is available for use in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154125.aspx
+            for more information)
+            </summary>
+            <param name='serviceName'>
+            The desired storage account name to check for availability.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response to a storage account check name availability request
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.BeginCreatingAsync(Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountCreateParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Create Storage Account operation creates a new storage account
+            in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/hh264518.aspx
+            for more information)
+            </summary>
+            <param name='parameters'>
+            Parameters supplied to the Create Storage Account operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard service response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.CreateAsync(Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountCreateParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Create Storage Account operation creates a new storage account
+            in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/hh264518.aspx
+            for more information)
+            </summary>
+            <param name='parameters'>
+            Parameters supplied to the Create Storage Account operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.DeleteAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Delete Storage Account operation deletes the specifiedstorage
+            account from Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/hh264517.aspx
+            for more information)
+            </summary>
+            <param name='serviceName'>
+            The name of the storage account.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard service response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.GetAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Get Storage Account Properties operation returns system
+            properties for the specified storage account.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460802.aspx
+            for more information)
+            </summary>
+            <param name='serviceName'>
+            Name of the storage account to get.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The Get Storage Account Properties operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.GetKeysAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Get Storage Keys operation returns the primary and secondary
+            access keys for the specified storage account.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460785.aspx
+            for more information)
+            </summary>
+            <param name='serviceName'>
+            The name of the desired storage account.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The primary and secondary access keys for a storage account.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.ListAsync(System.Threading.CancellationToken)">
+            <summary>
+            The List Storage Accounts operation lists the storage accounts
+            available under the current subscription.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460787.aspx
+            for more information)
+            </summary>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The List Storage Accounts operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.RegenerateKeysAsync(Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountRegenerateKeysParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Regenerate Keys operation regenerates the primary or secondary
+            access key for the specified storage account.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460795.aspx
+            for more information)
+            </summary>
+            <param name='parameters'>
+            Parameters supplied to the Regenerate Keys operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The primary and secondary access keys for a storage account.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.UpdateAsync(System.String,Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountUpdateParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Update Storage Account operation updates the label, the
+            description, and enables or disables the geo-replication status
+            for a storage account in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/hh264516.aspx
+            for more information)
+            </summary>
+            <param name='serviceName'>
+            Name of the storage account to update.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Update Storage Account operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard service response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperationsExtensions">
+            <summary>
+            The Service Management API includes operations for managing the storage
+            accounts beneath your subscription.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460790.aspx for
+            more information)
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperationsExtensions.CheckNameAvailability(Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations,System.String)">
+            <summary>
+            The Check Name Availability operation checks if a storage account
+            name is available for use in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154125.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.
+            </param>
+            <param name='serviceName'>
+            The desired storage account name to check for availability.
+            </param>
+            <returns>
+            The response to a storage account check name availability request
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperationsExtensions.CheckNameAvailabilityAsync(Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations,System.String)">
+            <summary>
+            The Check Name Availability operation checks if a storage account
+            name is available for use in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154125.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.
+            </param>
+            <param name='serviceName'>
+            The desired storage account name to check for availability.
+            </param>
+            <returns>
+            The response to a storage account check name availability request
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperationsExtensions.BeginCreating(Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations,Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountCreateParameters)">
+            <summary>
+            The Create Storage Account operation creates a new storage account
+            in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/hh264518.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Storage Account operation.
+            </param>
+            <returns>
+            A standard service response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperationsExtensions.BeginCreatingAsync(Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations,Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountCreateParameters)">
+            <summary>
+            The Create Storage Account operation creates a new storage account
+            in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/hh264518.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Storage Account operation.
+            </param>
+            <returns>
+            A standard service response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperationsExtensions.Create(Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations,Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountCreateParameters)">
+            <summary>
+            The Create Storage Account operation creates a new storage account
+            in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/hh264518.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Storage Account operation.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperationsExtensions.CreateAsync(Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations,Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountCreateParameters)">
+            <summary>
+            The Create Storage Account operation creates a new storage account
+            in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/hh264518.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Storage Account operation.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperationsExtensions.Delete(Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations,System.String)">
+            <summary>
+            The Delete Storage Account operation deletes the specifiedstorage
+            account from Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/hh264517.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.
+            </param>
+            <param name='serviceName'>
+            The name of the storage account.
+            </param>
+            <returns>
+            A standard service response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperationsExtensions.DeleteAsync(Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations,System.String)">
+            <summary>
+            The Delete Storage Account operation deletes the specifiedstorage
+            account from Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/hh264517.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.
+            </param>
+            <param name='serviceName'>
+            The name of the storage account.
+            </param>
+            <returns>
+            A standard service response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperationsExtensions.Get(Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations,System.String)">
+            <summary>
+            The Get Storage Account Properties operation returns system
+            properties for the specified storage account.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460802.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.
+            </param>
+            <param name='serviceName'>
+            Name of the storage account to get.
+            </param>
+            <returns>
+            The Get Storage Account Properties operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperationsExtensions.GetAsync(Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations,System.String)">
+            <summary>
+            The Get Storage Account Properties operation returns system
+            properties for the specified storage account.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460802.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.
+            </param>
+            <param name='serviceName'>
+            Name of the storage account to get.
+            </param>
+            <returns>
+            The Get Storage Account Properties operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperationsExtensions.GetKeys(Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations,System.String)">
+            <summary>
+            The Get Storage Keys operation returns the primary and secondary
+            access keys for the specified storage account.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460785.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.
+            </param>
+            <param name='serviceName'>
+            The name of the desired storage account.
+            </param>
+            <returns>
+            The primary and secondary access keys for a storage account.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperationsExtensions.GetKeysAsync(Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations,System.String)">
+            <summary>
+            The Get Storage Keys operation returns the primary and secondary
+            access keys for the specified storage account.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460785.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.
+            </param>
+            <param name='serviceName'>
+            The name of the desired storage account.
+            </param>
+            <returns>
+            The primary and secondary access keys for a storage account.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperationsExtensions.List(Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations)">
+            <summary>
+            The List Storage Accounts operation lists the storage accounts
+            available under the current subscription.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460787.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.
+            </param>
+            <returns>
+            The List Storage Accounts operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperationsExtensions.ListAsync(Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations)">
+            <summary>
+            The List Storage Accounts operation lists the storage accounts
+            available under the current subscription.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460787.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.
+            </param>
+            <returns>
+            The List Storage Accounts operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperationsExtensions.RegenerateKeys(Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations,Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountRegenerateKeysParameters)">
+            <summary>
+            The Regenerate Keys operation regenerates the primary or secondary
+            access key for the specified storage account.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460795.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Regenerate Keys operation.
+            </param>
+            <returns>
+            The primary and secondary access keys for a storage account.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperationsExtensions.RegenerateKeysAsync(Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations,Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountRegenerateKeysParameters)">
+            <summary>
+            The Regenerate Keys operation regenerates the primary or secondary
+            access key for the specified storage account.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460795.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Regenerate Keys operation.
+            </param>
+            <returns>
+            The primary and secondary access keys for a storage account.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperationsExtensions.Update(Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations,System.String,Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountUpdateParameters)">
+            <summary>
+            The Update Storage Account operation updates the label, the
+            description, and enables or disables the geo-replication status
+            for a storage account in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/hh264516.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.
+            </param>
+            <param name='serviceName'>
+            Name of the storage account to update.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Update Storage Account operation.
+            </param>
+            <returns>
+            A standard service response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperationsExtensions.UpdateAsync(Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations,System.String,Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountUpdateParameters)">
+            <summary>
+            The Update Storage Account operation updates the label, the
+            description, and enables or disables the geo-replication status
+            for a storage account in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/hh264516.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.Storage.IStorageAccountOperations.
+            </param>
+            <param name='serviceName'>
+            Name of the storage account to update.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Update Storage Account operation.
+            </param>
+            <returns>
+            A standard service response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperations">
+            <summary>
+            The Service Management API includes operations for managing the storage
+            accounts beneath your subscription.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460790.aspx for
+            more information)
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperations.#ctor(Microsoft.WindowsAzure.Management.Storage.StorageManagementClient)">
+            <summary>
+            Initializes a new instance of the StorageAccountOperations class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperations.CheckNameAvailabilityAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Check Name Availability operation checks if a storage account
+            name is available for use in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154125.aspx
+            for more information)
+            </summary>
+            <param name='serviceName'>
+            The desired storage account name to check for availability.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response to a storage account check name availability request
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperations.BeginCreatingAsync(Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountCreateParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Create Storage Account operation creates a new storage account
+            in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/hh264518.aspx
+            for more information)
+            </summary>
+            <param name='parameters'>
+            Parameters supplied to the Create Storage Account operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard service response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperations.CreateAsync(Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountCreateParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Create Storage Account operation creates a new storage account
+            in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/hh264518.aspx
+            for more information)
+            </summary>
+            <param name='parameters'>
+            Parameters supplied to the Create Storage Account operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperations.DeleteAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Delete Storage Account operation deletes the specifiedstorage
+            account from Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/hh264517.aspx
+            for more information)
+            </summary>
+            <param name='serviceName'>
+            The name of the storage account.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard service response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperations.GetAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Get Storage Account Properties operation returns system
+            properties for the specified storage account.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460802.aspx
+            for more information)
+            </summary>
+            <param name='serviceName'>
+            Name of the storage account to get.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The Get Storage Account Properties operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperations.GetKeysAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Get Storage Keys operation returns the primary and secondary
+            access keys for the specified storage account.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460785.aspx
+            for more information)
+            </summary>
+            <param name='serviceName'>
+            The name of the desired storage account.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The primary and secondary access keys for a storage account.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperations.ListAsync(System.Threading.CancellationToken)">
+            <summary>
+            The List Storage Accounts operation lists the storage accounts
+            available under the current subscription.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460787.aspx
+            for more information)
+            </summary>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The List Storage Accounts operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperations.RegenerateKeysAsync(Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountRegenerateKeysParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Regenerate Keys operation regenerates the primary or secondary
+            access key for the specified storage account.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460795.aspx
+            for more information)
+            </summary>
+            <param name='parameters'>
+            Parameters supplied to the Regenerate Keys operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The primary and secondary access keys for a storage account.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperations.UpdateAsync(System.String,Microsoft.WindowsAzure.Management.Storage.Models.StorageAccountUpdateParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Update Storage Account operation updates the label, the
+            description, and enables or disables the geo-replication status
+            for a storage account in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/hh264516.aspx
+            for more information)
+            </summary>
+            <param name='serviceName'>
+            Name of the storage account to update.
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Update Storage Account operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard service response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.Storage.StorageAccountOperations.Client">
+            <summary>
+            Gets a reference to the
+            Microsoft.WindowsAzure.Management.Storage.StorageManagementClient.
+            </summary>
+        </member>
+    </members>
+</doc>

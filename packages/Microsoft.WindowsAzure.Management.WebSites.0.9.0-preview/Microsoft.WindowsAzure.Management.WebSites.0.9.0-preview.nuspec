@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
+  <metadata minClientVersion="2.5">
+    <id>Microsoft.WindowsAzure.Management.WebSites</id>
+    <version>0.9.0-preview</version>
+    <title>Windows Azure Web Sites Management Library</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://go.microsoft.com/fwlink/?LinkId=235170</licenseUrl>
+    <projectUrl>https://github.com/WindowsAzure/azure-sdk-for-net</projectUrl>
+    <iconUrl>http://go.microsoft.com/fwlink/?LinkID=288890</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Provides management capabilities for Windows Azure Web Sites.  Deploy, configure, debug, and scale your websites using familiar APIs.</description>
+    <summary>Provides management capabilities for Windows Azure Web Sites.  Deploy, configure, debug, and scale your websites using familiar APIs.</summary>
+    <releaseNotes>PREVIEW RELEASE</releaseNotes>
+    <copyright>Copyright © Microsoft Corporation</copyright>
+    <tags>Microsoft "Windows Azure" Azure web site management "web sites" sites management" REST HTTP client windowsazureofficial</tags>
+    <dependencies>
+      <dependency id="Microsoft.WindowsAzure.Common" version="0.9.0-preview" />
+    </dependencies>
+    <references>
+      <group targetFramework=".NETPortable0.0-net45+sl50+wp80+win">
+        <reference file="Microsoft.WindowsAzure.Management.WebSites.dll" />
+      </group>
+    </references>
+  </metadata>
+</package>

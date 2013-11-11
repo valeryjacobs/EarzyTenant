@@ -1,0 +1,3402 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.WindowsAzure.Management.VirtualNetworks</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.ClientRootCertificateCreateParameters.#ctor">
+            <summary>
+            Initializes a new instance of the
+            ClientRootCertificateCreateParameters class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.ClientRootCertificateCreateParameters.Certificate">
+            <summary>
+            The new client root certificate to upload, represented as a hex
+            encoded string
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.ClientRootCertificateGetResponse">
+            <summary>
+            A standard storage response including an HTTP status code and request
+            ID.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.ClientRootCertificateGetResponse.#ctor">
+            <summary>
+            Initializes a new instance of the ClientRootCertificateGetResponse
+            class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.ClientRootCertificateGetResponse.Certificate">
+            <summary>
+            The current client root certificate for the network gateway
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.ClientRootCertificateListResponse">
+            <summary>
+            The response to the list client root certificates request
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.ClientRootCertificateListResponse.#ctor">
+            <summary>
+            Initializes a new instance of the ClientRootCertificateListResponse
+            class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.ClientRootCertificateListResponse.GetEnumerator">
+            <summary>
+            Gets the sequence of ClientRootCertificates.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.ClientRootCertificateListResponse.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Gets the sequence of ClientRootCertificates.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.ClientRootCertificateListResponse.ClientRootCertificates">
+            <summary>
+            The list of client root certificates
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.ClientRootCertificateListResponse.ClientRootCertificate.#ctor">
+            <summary>
+            Initializes a new instance of the ClientRootCertificate class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.ClientRootCertificateListResponse.ClientRootCertificate.ExpirationTime">
+            <summary>
+            Specifies the time that the certificate will expire.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.ClientRootCertificateListResponse.ClientRootCertificate.Subject">
+            <summary>
+            Specifies the distinguished name of the certificate issuer.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.ClientRootCertificateListResponse.ClientRootCertificate.Thumbprint">
+            <summary>
+            Specifies the thumbprint of the certificate.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayConnectDisconnectOrTestParameters">
+            <summary>
+            The parameters for the Connect, Disconnect, or Test request
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayConnectDisconnectOrTestParameters.#ctor">
+            <summary>
+            Initializes a new instance of the
+            GatewayConnectDisconnectOrTestParameters class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayConnectDisconnectOrTestParameters.Operation">
+            <summary>
+            Required. Specifies the operation to perform on the connection. Can
+            be set to Connect, Disconnect or Test to connect to a local
+            network, disconnect from a local network, or test the gateway’s
+            connection to a local network site.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayConnectDisconnectOrTestParameters.IPAddress">
+            <summary>
+            Required if operation is set to Test; otherwise not used. Specifies
+            the IP address of the target local network site with which the
+            gateway will test connectivity.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayConnectionUpdateOperation">
+            <summary>
+            Specifies the operation to perform on the connection. Can be set to
+            Connect, Disconnect or Test to connect to a local network, disconnect
+            from a local network, or test the gateway’s connection to a local
+            network site.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayCreateParameters">
+            <summary>
+            The parameters to the Gateway Create request
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayCreateParameters.#ctor">
+            <summary>
+            Initializes a new instance of the GatewayCreateParameters class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayCreateParameters.GatewayType">
+            <summary>
+            The routing type for this virtual network gateway.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayEvent">
+            <summary>
+            A management event for the virtual network gateway
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayEvent.#ctor">
+            <summary>
+            Initializes a new instance of the GatewayEvent class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayEvent.Timestamp">
+            <summary>
+            The date and time when the event occurred
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayEvent.Id">
+            <summary>
+            The event ID
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayEvent.Message">
+            <summary>
+            The event message
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayEvent.Data">
+            <summary>
+            Additional data associated with this event
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGenerateVpnClientPackageParameters">
+            <summary>
+            The parameters to the Generate VPN Client Package request.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGenerateVpnClientPackageParameters.#ctor">
+            <summary>
+            Initializes a new instance of the
+            GatewayGenerateVpnClientPackageParameters class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGenerateVpnClientPackageParameters.ProcessorArchitecture">
+            <summary>
+            The client processor architecture.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetDeviceConfigurationScriptParameters">
+            <summary>
+            The vendor, platform, and os family ofthe requested device
+            configuration script.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetDeviceConfigurationScriptParameters.#ctor">
+            <summary>
+            Initializes a new instance of the
+            GatewayGetDeviceConfigurationScriptParameters class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetDeviceConfigurationScriptParameters.Vendor">
+            <summary>
+            The name of the device vendor
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetDeviceConfigurationScriptParameters.Platform">
+            <summary>
+            The device platform
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetDeviceConfigurationScriptParameters.OSFamily">
+            <summary>
+            The device OS Family
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetDeviceConfigurationScriptResponse">
+            <summary>
+            The configuration script returned from the get device configuration
+            script request
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetDeviceConfigurationScriptResponse.#ctor">
+            <summary>
+            Initializes a new instance of the
+            GatewayGetDeviceConfigurationScriptResponse class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetDeviceConfigurationScriptResponse.ConfigurationScript">
+            <summary>
+            The requested configuration script for the local network device
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetOperationStatusResponse">
+            <summary>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or has
+            failed. Note that this status is distinct from the HTTP status code
+            returned for the Get Operation Status operation itself.  If the
+            asynchronous operation succeeded, the response body includes the HTTP
+            status code for the successful request.  If the asynchronous operation
+            failed, the response body includes the HTTP status code for the failed
+            request, and also includes error information regarding the failure.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetOperationStatusResponse.#ctor">
+            <summary>
+            Initializes a new instance of the GatewayGetOperationStatusResponse
+            class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetOperationStatusResponse.Id">
+            <summary>
+            The request ID of the asynchronous request. This value is returned
+            in the x-ms-request-id response header of the asynchronous request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetOperationStatusResponse.Status">
+            <summary>
+            The status of the asynchronous request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetOperationStatusResponse.HttpStatusCode">
+            <summary>
+            The HTTP status code for the asynchronous request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetOperationStatusResponse.Error">
+            <summary>
+            If the asynchronous operation failed, the response body includes
+            the HTTP status code for the failed request, and also includes
+            error information regarding the failure.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetOperationStatusResponse.ErrorDetails">
+            <summary>
+            If the asynchronous operation failed, the response body includes
+            the HTTP status code for the failed request, and also includes
+            error information regarding the failure.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetOperationStatusResponse.ErrorDetails.#ctor">
+            <summary>
+            Initializes a new instance of the ErrorDetails class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetOperationStatusResponse.ErrorDetails.Code">
+            <summary>
+            The management service error code returned if the asynchronous
+            request failed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetOperationStatusResponse.ErrorDetails.Message">
+            <summary>
+            The management service error message returned if the
+            asynchronous request failed.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetResponse">
+            <summary>
+            A standard storage response including an HTTP status code and request
+            ID.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetResponse.#ctor">
+            <summary>
+            Initializes a new instance of the GatewayGetResponse class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetResponse.State">
+            <summary>
+            The provisioning state of the virtual network gateway
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetResponse.VipAddress">
+            <summary>
+            The virtual IP address for this virtual network gateway
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetResponse.LastEvent">
+            <summary>
+            The last recorded event for this virtual network gateway
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetResponse.GatewayType">
+            <summary>
+            The type of gateway routing used for this virtual network
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetSharedKeyResponse">
+            <summary>
+            The response to the get shared key request
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetSharedKeyResponse.#ctor">
+            <summary>
+            Initializes a new instance of the GatewayGetSharedKeyResponse class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetSharedKeyResponse.SharedKey">
+            <summary>
+            Contains the shared key used by the gateway to authenticate
+            connections to sites on a virtual network
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListConnectionsResponse">
+            <summary>
+            The response to a ListConnections request to a Virtual Network Gateway
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListConnectionsResponse.#ctor">
+            <summary>
+            Initializes a new instance of the GatewayListConnectionsResponse
+            class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListConnectionsResponse.GetEnumerator">
+            <summary>
+            Gets the sequence of Connections.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListConnectionsResponse.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Gets the sequence of Connections.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListConnectionsResponse.Connections">
+            <summary>
+            The list of connections
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListConnectionsResponse.GatewayConnection.#ctor">
+            <summary>
+            Initializes a new instance of the GatewayConnection class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListConnectionsResponse.GatewayConnection.LocalNetworkSiteName">
+            <summary>
+            The name of the local network site represented by the connection
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListConnectionsResponse.GatewayConnection.ConnectivityState">
+            <summary>
+            The connection state of the site. You can set the connection
+            state to Connected, Connecting or NotConnected.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListConnectionsResponse.GatewayConnection.LastEvent">
+            <summary>
+            A record of the last provisioning event for this connection.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListConnectionsResponse.GatewayConnection.IngressBytesTransferred">
+            <summary>
+            The number of bytes of data transferred in through this
+            connection since it was started
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListConnectionsResponse.GatewayConnection.EgressBytesTransferred">
+            <summary>
+            The number of bytes of data transferred out through this
+            connection since it was started
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListConnectionsResponse.GatewayConnection.AllocatedIPAddresses">
+            <summary>
+            If LocalNetworkSiteName is defined as VPNClientConnection, this
+            element contains a list of IP addresses (represented as
+            strings) that are assigned to currently connected VPN clients.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListSupportedDevicesResponse">
+            <summary>
+            The respoonse to the get supported platform configuration request
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListSupportedDevicesResponse.#ctor">
+            <summary>
+            Initializes a new instance of the
+            GatewayListSupportedDevicesResponse class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListSupportedDevicesResponse.Version">
+            <summary>
+            The version for this device configuration list.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListSupportedDevicesResponse.Vendors">
+            <summary>
+            The set of supported vendors
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListSupportedDevicesResponse.Vendor">
+            <summary>
+            The name and supported platforms for the vendor.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListSupportedDevicesResponse.Vendor.#ctor">
+            <summary>
+            Initializes a new instance of the Vendor class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListSupportedDevicesResponse.Vendor.Name">
+            <summary>
+            The vendor name
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListSupportedDevicesResponse.Vendor.Platforms">
+            <summary>
+            The supported platforms for the vendor.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListSupportedDevicesResponse.Platform">
+            <summary>
+            The name and supported OS Families for this vendor on the platform
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListSupportedDevicesResponse.Platform.#ctor">
+            <summary>
+            Initializes a new instance of the Platform class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListSupportedDevicesResponse.Platform.Name">
+            <summary>
+            The platform name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListSupportedDevicesResponse.Platform.OSFamilies">
+            <summary>
+            The supported OS Families for this platform
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListSupportedDevicesResponse.OSFamily.#ctor">
+            <summary>
+            Initializes a new instance of the OSFamily class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayListSupportedDevicesResponse.OSFamily.Name">
+            <summary>
+            The name of the os family
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayOperationResponse">
+            <summary>
+            A standard storage response including an HTTP status code and request
+            ID.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayOperationResponse.#ctor">
+            <summary>
+            Initializes a new instance of the GatewayOperationResponse class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayOperationStatus">
+            <summary>
+            The status of the asynchronous request.
+            </summary>
+        </member>
+        <member name="F:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayOperationStatus.InProgress">
+            <summary>
+            The asynchronous request is in progress.
+            </summary>
+        </member>
+        <member name="F:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayOperationStatus.Successful">
+            <summary>
+            The asynchronous request succeeded.
+            </summary>
+        </member>
+        <member name="F:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayOperationStatus.Failed">
+            <summary>
+            The asynchronous request failed.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayProcessorArchitecture">
+            <summary>
+            The processor architecture for the generated vpn client package
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayProfile">
+            <summary>
+            Possible values for Gateway Profile
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayProvisioningEventStates">
+            <summary>
+            Standard states for Virtual Network Gateway Provisioning Events
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayResetSharedKeyParameters">
+            <summary>
+            The length of shared key to generate
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayResetSharedKeyParameters.#ctor">
+            <summary>
+            Initializes a new instance of the GatewayResetSharedKeyParameters
+            class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayResetSharedKeyParameters.KeyLength">
+            <summary>
+            The number of bytes in the shared key.  Minimum is 1 and maximum is
+            128
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkGetConfigurationResponse">
+            <summary>
+            The Get Network Configuration operation response.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkGetConfigurationResponse.#ctor">
+            <summary>
+            Initializes a new instance of the NetworkGetConfigurationResponse
+            class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkGetConfigurationResponse.Configuration">
+            <summary>
+            The network configuration for this subscription.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse">
+            <summary>
+            The response structure for the Server List operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.#ctor">
+            <summary>
+            Initializes a new instance of the NetworkListResponse class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.GetEnumerator">
+            <summary>
+            Gets the sequence of VirtualNetworkSites.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Gets the sequence of VirtualNetworkSites.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.VirtualNetworkSite">
+            <summary>
+            Contains the collections of parameters used to configure a virtual
+            network space that is dedicated to your subscription without
+            overlapping with other networks
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.VirtualNetworkSite.#ctor">
+            <summary>
+            Initializes a new instance of the VirtualNetworkSite class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.VirtualNetworkSite.Name">
+            <summary>
+            Name of the virtual network site.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.VirtualNetworkSite.Label">
+            <summary>
+            The friendly identifier of the site.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.VirtualNetworkSite.Id">
+            <summary>
+            A unique string identifier that represents the virtual network
+            site.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.VirtualNetworkSite.AffinityGroup">
+            <summary>
+            An affinity group, which indirectly refers to the location
+            where the virtual network exists.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.VirtualNetworkSite.State">
+            <summary>
+            Current status of the virtual network. (Created, Creating,
+            Updating, Deleting, Unavailable)
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.VirtualNetworkSite.AddressSpace">
+            <summary>
+            The list of network address spaces for a virtual network site.
+            This represents the overall network space contained within the
+            virtual network site.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.VirtualNetworkSite.Subnets">
+            <summary>
+            The list of network subnets for a virtual network site. All
+            network subnets must be contained within the overall virtual
+            network address spaces.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.VirtualNetworkSite.DnsServers">
+            <summary>
+            The list of on DNS Servers associated with the virtual network
+            site.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.VirtualNetworkSite.Gateway">
+            <summary>
+            Gateway that contains a list of Local Network Sites which
+            enables the Virtual network site to communicate with a
+            customer’s on premise networks.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.AddressSpace.#ctor">
+            <summary>
+            Initializes a new instance of the AddressSpace class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.AddressSpace.AddressPrefixes">
+            <summary>
+            Address spaces, in CIDR format in the virtual network
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.Subnet.#ctor">
+            <summary>
+            Initializes a new instance of the Subnet class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.Subnet.Name">
+            <summary>
+            Name for the subnet
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.Subnet.AddressPrefix">
+            <summary>
+            Represents an address space, in CIDR format that defines the
+            subnet
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.DnsServer.#ctor">
+            <summary>
+            Initializes a new instance of the DnsServer class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.DnsServer.Name">
+            <summary>
+            The name of the DNS server
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.DnsServer.Address">
+            <summary>
+            The IPv4 address of the DNS server
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.Gateway">
+            <summary>
+            Contains gateway references to the local network sites that the
+            virtual network can connect to.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.Gateway.#ctor">
+            <summary>
+            Initializes a new instance of the Gateway class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.Gateway.Profile">
+            <summary>
+            The gateway connection size
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.Gateway.Sites">
+            <summary>
+            The list of local network sites that the virtual network can
+            connect to.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.Gateway.VPNClientAddressPool">
+            <summary>
+            The VPNClientAddressPool reserves a pool of IP addresses for
+            VPN clients. This object is used for point-to-site
+            connectivity.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.LocalNetworkSite">
+            <summary>
+            Contains the list of parameters defining the local network site.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.LocalNetworkSite.#ctor">
+            <summary>
+            Initializes a new instance of the LocalNetworkSite class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.LocalNetworkSite.Name">
+            <summary>
+            The name of the local network site
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.LocalNetworkSite.VpnGatewayAddress">
+            <summary>
+            The IPv4 address of the local network site
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.LocalNetworkSite.AddressSpace">
+            <summary>
+            The address space of the local network site
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.LocalNetworkSite.Connections">
+            <summary>
+            Specifies the types of connections to the local network site
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.Connection">
+            <summary>
+            Specifies the type of connection of the local network site. The
+            value of this element can be either IPsec or Dedicated. The
+            default value is IPsec.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.Connection.#ctor">
+            <summary>
+            Initializes a new instance of the Connection class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.VPNClientAddressPool">
+            <summary>
+            The VPNClientAddressPool reserves a pool of IP addresses for VPN
+            clients. This object is used for point-to-site connectivity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.VPNClientAddressPool.#ctor">
+            <summary>
+            Initializes a new instance of the VPNClientAddressPool class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkListResponse.VPNClientAddressPool.AddressPrefixes">
+            <summary>
+            The CIDR identifiers that identify addresses in the pool.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkSetConfigurationParameters">
+            <summary>
+            Parameters supplied to the Set Network Configuration operation.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkSetConfigurationParameters.#ctor">
+            <summary>
+            Initializes a new instance of the NetworkSetConfigurationParameters
+            class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkSetConfigurationParameters.Configuration">
+            <summary>
+            The network configuration for this subscription.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.OperationStatus">
+            <summary>
+            The status of the asynchronous request.
+            </summary>
+        </member>
+        <member name="F:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.OperationStatus.InProgress">
+            <summary>
+            The asynchronous request is in progress.
+            </summary>
+        </member>
+        <member name="F:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.OperationStatus.Succeeded">
+            <summary>
+            The asynchronous request succeeded.
+            </summary>
+        </member>
+        <member name="F:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.OperationStatus.Failed">
+            <summary>
+            The asynchronous request failed.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.VirtualNetworkOperationStatusResponse">
+            <summary>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or has
+            failed. Note that this status is distinct from the HTTP status code
+            returned for the Get Operation Status operation itself.  If the
+            asynchronous operation succeeded, the response body includes the HTTP
+            status code for the successful request.  If the asynchronous operation
+            failed, the response body includes the HTTP status code for the failed
+            request, and also includes error information regarding the failure.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.VirtualNetworkOperationStatusResponse.#ctor">
+            <summary>
+            Initializes a new instance of the
+            VirtualNetworkOperationStatusResponse class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.VirtualNetworkOperationStatusResponse.Id">
+            <summary>
+            The request ID of the asynchronous request. This value is returned
+            in the x-ms-request-id response header of the asynchronous request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.VirtualNetworkOperationStatusResponse.Status">
+            <summary>
+            The status of the asynchronous request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.VirtualNetworkOperationStatusResponse.HttpStatusCode">
+            <summary>
+            The HTTP status code for the asynchronous request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.VirtualNetworkOperationStatusResponse.Error">
+            <summary>
+            If the asynchronous operation failed, the response body includes
+            the HTTP status code for the failed request, and also includes
+            error information regarding the failure.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.VirtualNetworkOperationStatusResponse.ErrorDetails">
+            <summary>
+            If the asynchronous operation failed, the response body includes
+            the HTTP status code for the failed request, and also includes
+            error information regarding the failure.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.VirtualNetworkOperationStatusResponse.ErrorDetails.#ctor">
+            <summary>
+            Initializes a new instance of the ErrorDetails class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.VirtualNetworkOperationStatusResponse.ErrorDetails.Code">
+            <summary>
+            The management service error code returned if the asynchronous
+            request failed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.Models.VirtualNetworkOperationStatusResponse.ErrorDetails.Message">
+            <summary>
+            The management service error message returned if the
+            asynchronous request failed.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.IVirtualNetworkManagementClient">
+            <summary>
+            The Service Management API includes operations for managing the virtual
+            networks your subscription.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj157182.aspx for
+            more information)
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.IVirtualNetworkManagementClient.GetOperationStatusAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Get Operation Status operation returns the status of
+            thespecified operation. After calling an asynchronous operation,
+            you can call Get Operation Status to determine whether the
+            operation has succeeded, failed, or is still in progress.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460783.aspx
+            for more information)
+            </summary>
+            <param name='requestId'>
+            The request ID for the request you wish to track. The request ID is
+            returned in the x-ms-request-id response header for every request.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.IVirtualNetworkManagementClient.Credentials">
+            <summary>
+            When you create a Windows Azure subscription, it is uniquely
+            identified by a subscription ID. The subscription ID forms part of
+            the URI for every call that you make to the Service Management
+            API.  The Windows Azure Service ManagementAPI use mutual
+            authentication of management certificates over SSL to ensure that
+            a request made to the service is secure.  No anonymous requests
+            are allowed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.IVirtualNetworkManagementClient.BaseUri">
+            <summary>
+            The URI used as the base for all SQL requests.
+            </summary>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.VirtualNetworkManagementClientExtensions">
+            <summary>
+            The Service Management API includes operations for managing the virtual
+            networks your subscription.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj157182.aspx for
+            more information)
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.VirtualNetworkManagementClientExtensions.GetOperationStatus(Microsoft.WindowsAzure.Management.VirtualNetworks.IVirtualNetworkManagementClient,System.String)">
+            <summary>
+            The Get Operation Status operation returns the status of
+            thespecified operation. After calling an asynchronous operation,
+            you can call Get Operation Status to determine whether the
+            operation has succeeded, failed, or is still in progress.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460783.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IVirtualNetworkManagementClient.
+            </param>
+            <param name='requestId'>
+            The request ID for the request you wish to track. The request ID is
+            returned in the x-ms-request-id response header for every request.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.VirtualNetworkManagementClientExtensions.GetOperationStatusAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.IVirtualNetworkManagementClient,System.String)">
+            <summary>
+            The Get Operation Status operation returns the status of
+            thespecified operation. After calling an asynchronous operation,
+            you can call Get Operation Status to determine whether the
+            operation has succeeded, failed, or is still in progress.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460783.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IVirtualNetworkManagementClient.
+            </param>
+            <param name='requestId'>
+            The request ID for the request you wish to track. The request ID is
+            returned in the x-ms-request-id response header for every request.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="T:Microsoft.WindowsAzure.Management.VirtualNetworks.VirtualNetworkManagementClient">
+            <summary>
+            The Service Management API includes operations for managing the virtual
+            networks your subscription.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj157182.aspx for
+            more information)
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.VirtualNetworkManagementClient.#ctor">
+            <summary>
+            Initializes a new instance of the VirtualNetworkManagementClient
+            class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.VirtualNetworkManagementClient.#ctor(Microsoft.WindowsAzure.SubscriptionCloudCredentials,System.Uri)">
+            <summary>
+            Initializes a new instance of the VirtualNetworkManagementClient
+            class.
+            </summary>
+            <param name='credentials'>
+            When you create a Windows Azure subscription, it is uniquely
+            identified by a subscription ID. The subscription ID forms part of
+            the URI for every call that you make to the Service Management
+            API.  The Windows Azure Service ManagementAPI use mutual
+            authentication of management certificates over SSL to ensure that
+            a request made to the service is secure.  No anonymous requests
+            are allowed.
+            </param>
+            <param name='baseUri'>
+            The URI used as the base for all SQL requests.
+            </param>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.VirtualNetworkManagementClient.#ctor(Microsoft.WindowsAzure.SubscriptionCloudCredentials)">
+            <summary>
+            Initializes a new instance of the VirtualNetworkManagementClient
+            class.
+            </summary>
+            <param name='credentials'>
+            When you create a Windows Azure subscription, it is uniquely
+            identified by a subscription ID. The subscription ID forms part of
+            the URI for every call that you make to the Service Management
+            API.  The Windows Azure Service ManagementAPI use mutual
+            authentication of management certificates over SSL to ensure that
+            a request made to the service is secure.  No anonymous requests
+            are allowed.
+            </param>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.VirtualNetworkManagementClient.GetOperationStatusAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Get Operation Status operation returns the status of
+            thespecified operation. After calling an asynchronous operation,
+            you can call Get Operation Status to determine whether the
+            operation has succeeded, failed, or is still in progress.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/ee460783.aspx
+            for more information)
+            </summary>
+            <param name='requestId'>
+            The request ID for the request you wish to track. The request ID is
+            returned in the x-ms-request-id response header for every request.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.VirtualNetworkManagementClient.ParseLocalNetworkConnectionType(System.String)">
+            <summary>
+            Parse enum values for type LocalNetworkConnectionType.
+            </summary>
+            <param name='value'>
+            The value to parse.
+            </param>
+            <returns>
+            The enum value.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.VirtualNetworkManagementClient.LocalNetworkConnectionTypeToString(Microsoft.WindowsAzure.Management.VirtualNetworks.Models.LocalNetworkConnectionType)">
+            <summary>
+            Convert an enum of type LocalNetworkConnectionType to a string.
+            </summary>
+            <param name='value'>
+            The value to convert to a string.
+            </param>
+            <returns>
+            The enum value as a string.
+            </returns>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.VirtualNetworkManagementClient.Credentials">
+            <summary>
+            When you create a Windows Azure subscription, it is uniquely
+            identified by a subscription ID. The subscription ID forms part of
+            the URI for every call that you make to the Service Management
+            API.  The Windows Azure Service ManagementAPI use mutual
+            authentication of management certificates over SSL to ensure that
+            a request made to the service is secure.  No anonymous requests
+            are allowed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.VirtualNetworkManagementClient.BaseUri">
+            <summary>
+            The URI used as the base for all SQL requests.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.IClientRootCertificateOperations.DeleteAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Delete Client Root Certificate operation deletes a previously
+            uploaded client root certificate. from Windows Azure  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/dn205128.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='certificateThumbprint'>
+            The X509 certificate thumbprint
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.IClientRootCertificateOperations.GetAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Get Client Root Certificate operation returns the public
+            portion of a previously uploaded client root certificate in a
+            base-64 encoded format from Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/dn205127.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='certificateThumbprint'>
+            The X509 certificate thumbprint
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.IClientRootCertificateOperations.ListAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The List Client Root Certificates operation returns a list of all
+            the client root certificates that are associated with the
+            specified virtual network in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/dn205130.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response to the list client root certificates request
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.IClientRootCertificateOperations.CreateAsync(System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.ClientRootCertificateCreateParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Upload Client Root Certificate operation is used to upload a
+            new client root certificate to Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/dn205129.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Upload client certificate Virtual
+            Network Gateway operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.ClientRootCertificateOperationsExtensions.Delete(Microsoft.WindowsAzure.Management.VirtualNetworks.IClientRootCertificateOperations,System.String,System.String)">
+            <summary>
+            The Delete Client Root Certificate operation deletes a previously
+            uploaded client root certificate. from Windows Azure  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/dn205128.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IClientRootCertificateOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='certificateThumbprint'>
+            The X509 certificate thumbprint
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.ClientRootCertificateOperationsExtensions.DeleteAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.IClientRootCertificateOperations,System.String,System.String)">
+            <summary>
+            The Delete Client Root Certificate operation deletes a previously
+            uploaded client root certificate. from Windows Azure  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/dn205128.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IClientRootCertificateOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='certificateThumbprint'>
+            The X509 certificate thumbprint
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.ClientRootCertificateOperationsExtensions.Get(Microsoft.WindowsAzure.Management.VirtualNetworks.IClientRootCertificateOperations,System.String,System.String)">
+            <summary>
+            The Get Client Root Certificate operation returns the public
+            portion of a previously uploaded client root certificate in a
+            base-64 encoded format from Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/dn205127.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IClientRootCertificateOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='certificateThumbprint'>
+            The X509 certificate thumbprint
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.ClientRootCertificateOperationsExtensions.GetAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.IClientRootCertificateOperations,System.String,System.String)">
+            <summary>
+            The Get Client Root Certificate operation returns the public
+            portion of a previously uploaded client root certificate in a
+            base-64 encoded format from Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/dn205127.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IClientRootCertificateOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='certificateThumbprint'>
+            The X509 certificate thumbprint
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.ClientRootCertificateOperationsExtensions.List(Microsoft.WindowsAzure.Management.VirtualNetworks.IClientRootCertificateOperations,System.String)">
+            <summary>
+            The List Client Root Certificates operation returns a list of all
+            the client root certificates that are associated with the
+            specified virtual network in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/dn205130.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IClientRootCertificateOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <returns>
+            The response to the list client root certificates request
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.ClientRootCertificateOperationsExtensions.ListAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.IClientRootCertificateOperations,System.String)">
+            <summary>
+            The List Client Root Certificates operation returns a list of all
+            the client root certificates that are associated with the
+            specified virtual network in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/dn205130.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IClientRootCertificateOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <returns>
+            The response to the list client root certificates request
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.ClientRootCertificateOperationsExtensions.Create(Microsoft.WindowsAzure.Management.VirtualNetworks.IClientRootCertificateOperations,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.ClientRootCertificateCreateParameters)">
+            <summary>
+            The Upload Client Root Certificate operation is used to upload a
+            new client root certificate to Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/dn205129.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IClientRootCertificateOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Upload client certificate Virtual
+            Network Gateway operation.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.ClientRootCertificateOperationsExtensions.CreateAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.IClientRootCertificateOperations,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.ClientRootCertificateCreateParameters)">
+            <summary>
+            The Upload Client Root Certificate operation is used to upload a
+            new client root certificate to Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/dn205129.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IClientRootCertificateOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Upload client certificate Virtual
+            Network Gateway operation.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.ClientRootCertificateOperations.#ctor(Microsoft.WindowsAzure.Management.VirtualNetworks.VirtualNetworkManagementClient)">
+            <summary>
+            Initializes a new instance of the ClientRootCertificateOperations
+            class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.ClientRootCertificateOperations.DeleteAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Delete Client Root Certificate operation deletes a previously
+            uploaded client root certificate. from Windows Azure  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/dn205128.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='certificateThumbprint'>
+            The X509 certificate thumbprint
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.ClientRootCertificateOperations.GetAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Get Client Root Certificate operation returns the public
+            portion of a previously uploaded client root certificate in a
+            base-64 encoded format from Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/dn205127.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='certificateThumbprint'>
+            The X509 certificate thumbprint
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.ClientRootCertificateOperations.ListAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The List Client Root Certificates operation returns a list of all
+            the client root certificates that are associated with the
+            specified virtual network in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/dn205130.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response to the list client root certificates request
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.ClientRootCertificateOperations.CreateAsync(System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.ClientRootCertificateCreateParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Upload Client Root Certificate operation is used to upload a
+            new client root certificate to Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/dn205129.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Upload client certificate Virtual
+            Network Gateway operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.ClientRootCertificateOperations.Client">
+            <summary>
+            Gets a reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.VirtualNetworkManagementClient.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.BeginConnectDisconnectOrTestingAsync(System.String,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayConnectDisconnectOrTestParameters,System.Threading.CancellationToken)">
+            <summary>
+            To connect to, disconnect from, or test your connection to a local
+            network site, access the connection resource representing the
+            local network and specify Connect, Disconnect or Test to perform
+            the desired operation.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154107.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='localNetworkSiteName'>
+            The name of the site to connect to
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Virtual Network Gateway operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.ConnectDisconnectOrTestAsync(System.String,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayConnectDisconnectOrTestParameters,System.Threading.CancellationToken)">
+            <summary>
+            To connect to, disconnect from, or test your connection to a local
+            network site, access the connection resource representing the
+            local network and specify Connect, Disconnect or Test to perform
+            the desired operation.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154107.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='localNetworkSiteName'>
+            The name of the site to connect to
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Virtual Network Gateway operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.BeginCreatingAsync(System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayCreateParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Create Virtual network Gateway operation creates a new network
+            gateways account in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154119.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Virtual Network Gateway operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.CreateAsync(System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayCreateParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Create Virtual network Gateway operation creates a new network
+            gateways account in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154119.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Virtual Network Gateway operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.BeginDeletingAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Delete Virtual network Gateway operation deletes a network
+            gateway for the specified virtual network in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154129.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.DeleteAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Delete Virtual network Gateway operation deletes a network
+            gateway for the specified virtual network in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154129.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.BeginFailoverAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Failover Virtual network Gateway operation causes a network
+            gateway failover for the specified virtual network in Windows
+            Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154118.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network in Azure.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.FailoverAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Failover Virtual network Gateway operation causes a network
+            gateway failover for the specified virtual network in Windows
+            Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154118.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network in Azure.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.GenerateVpnClientPackageAsync(System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGenerateVpnClientPackageParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Generate VPN Client Package creates a VPN client package for
+            the specified virtual network and gateway in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/dn205126.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Virtual Network Gateway operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.GetAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Get Virtual network Gateway operation gets information on the
+            network gateway for the specified vitrual network in Windows
+            Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154109.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.GetDeviceConfigurationScriptAsync(System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetDeviceConfigurationScriptParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Get Device Configuration Script operation returns a script that
+            you can use to configure local VPN devices to connect to the
+            gateway.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154115.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='parameters'>
+            The parameters for the GetDeviceConfigurationScript request
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The configuration script returned from the get device configuration
+            script request
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.GetOperationStatusAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Get Virtual network Gateway operation status gets information
+            on the status of network gateway operations in Windows Azure.
+            (see http://msdn.microsoft.com/en-us/library/windowsazure/jj154112.aspx
+            for more information)
+            </summary>
+            <param name='operationId'>
+            The id  of the virtualnetwork operation
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.GetSharedKeyAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Get Virtual network Gateway shared key operation gets the
+            shared key on the virtual network gateway for the specified
+            vitrual network connection to the specified local network in
+            Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154122.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='localNetworkName'>
+            The name of the local network
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response to the get shared key request
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.ListConnectionsAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The List Connections operation returns a list of the local network
+            connections that can be accessed through the gateway.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154120.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response to a ListConnections request to a Virtual Network
+            Gateway
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.ListSupportedDevicesAsync(System.Threading.CancellationToken)">
+            <summary>
+            The List Virtual Network Gateway Supported Devices operation lists
+            the supported, on-premise network devices that can connect to the
+            gateway.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154102.aspx
+            for more information)
+            </summary>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The respoonse to the get supported platform configuration request
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.BeginResetSharedKeyAsync(System.String,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayResetSharedKeyParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Reset Virtual network Gateway shared key operation resets the
+            shared key on the virtual network gateway for the specified
+            vitrual network connection to the specified local network in
+            Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154114.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='localNetworkName'>
+            The name of the local network
+            </param>
+            <param name='parameters'>
+            The parameters to the Virtual Network Gateway Reset Shared Key
+            request
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.ResetSharedKeyAsync(System.String,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayResetSharedKeyParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Reset Virtual network Gateway shared key operation resets the
+            shared key on the virtual network gateway for the specified
+            vitrual network connection to the specified local network in
+            Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154114.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='localNetworkName'>
+            The name of the local network
+            </param>
+            <param name='parameters'>
+            The parameters to the Virtual Network Gateway Reset Shared Key
+            request
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.BeginConnectDisconnectOrTesting(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayConnectDisconnectOrTestParameters)">
+            <summary>
+            To connect to, disconnect from, or test your connection to a local
+            network site, access the connection resource representing the
+            local network and specify Connect, Disconnect or Test to perform
+            the desired operation.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154107.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='localNetworkSiteName'>
+            The name of the site to connect to
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Virtual Network Gateway operation.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.BeginConnectDisconnectOrTestingAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayConnectDisconnectOrTestParameters)">
+            <summary>
+            To connect to, disconnect from, or test your connection to a local
+            network site, access the connection resource representing the
+            local network and specify Connect, Disconnect or Test to perform
+            the desired operation.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154107.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='localNetworkSiteName'>
+            The name of the site to connect to
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Virtual Network Gateway operation.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.ConnectDisconnectOrTest(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayConnectDisconnectOrTestParameters)">
+            <summary>
+            To connect to, disconnect from, or test your connection to a local
+            network site, access the connection resource representing the
+            local network and specify Connect, Disconnect or Test to perform
+            the desired operation.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154107.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='localNetworkSiteName'>
+            The name of the site to connect to
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Virtual Network Gateway operation.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.ConnectDisconnectOrTestAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayConnectDisconnectOrTestParameters)">
+            <summary>
+            To connect to, disconnect from, or test your connection to a local
+            network site, access the connection resource representing the
+            local network and specify Connect, Disconnect or Test to perform
+            the desired operation.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154107.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='localNetworkSiteName'>
+            The name of the site to connect to
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Virtual Network Gateway operation.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.BeginCreating(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayCreateParameters)">
+            <summary>
+            The Create Virtual network Gateway operation creates a new network
+            gateways account in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154119.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Virtual Network Gateway operation.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.BeginCreatingAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayCreateParameters)">
+            <summary>
+            The Create Virtual network Gateway operation creates a new network
+            gateways account in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154119.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Virtual Network Gateway operation.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.Create(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayCreateParameters)">
+            <summary>
+            The Create Virtual network Gateway operation creates a new network
+            gateways account in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154119.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Virtual Network Gateway operation.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.CreateAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayCreateParameters)">
+            <summary>
+            The Create Virtual network Gateway operation creates a new network
+            gateways account in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154119.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Virtual Network Gateway operation.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.BeginDeleting(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String)">
+            <summary>
+            The Delete Virtual network Gateway operation deletes a network
+            gateway for the specified virtual network in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154129.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.BeginDeletingAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String)">
+            <summary>
+            The Delete Virtual network Gateway operation deletes a network
+            gateway for the specified virtual network in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154129.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.Delete(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String)">
+            <summary>
+            The Delete Virtual network Gateway operation deletes a network
+            gateway for the specified virtual network in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154129.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.DeleteAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String)">
+            <summary>
+            The Delete Virtual network Gateway operation deletes a network
+            gateway for the specified virtual network in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154129.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.BeginFailover(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String)">
+            <summary>
+            The Failover Virtual network Gateway operation causes a network
+            gateway failover for the specified virtual network in Windows
+            Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154118.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network in Azure.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.BeginFailoverAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String)">
+            <summary>
+            The Failover Virtual network Gateway operation causes a network
+            gateway failover for the specified virtual network in Windows
+            Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154118.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network in Azure.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.Failover(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String)">
+            <summary>
+            The Failover Virtual network Gateway operation causes a network
+            gateway failover for the specified virtual network in Windows
+            Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154118.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network in Azure.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.FailoverAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String)">
+            <summary>
+            The Failover Virtual network Gateway operation causes a network
+            gateway failover for the specified virtual network in Windows
+            Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154118.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network in Azure.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.GenerateVpnClientPackage(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGenerateVpnClientPackageParameters)">
+            <summary>
+            The Generate VPN Client Package creates a VPN client package for
+            the specified virtual network and gateway in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/dn205126.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Virtual Network Gateway operation.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.GenerateVpnClientPackageAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGenerateVpnClientPackageParameters)">
+            <summary>
+            The Generate VPN Client Package creates a VPN client package for
+            the specified virtual network and gateway in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/dn205126.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Virtual Network Gateway operation.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.Get(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String)">
+            <summary>
+            The Get Virtual network Gateway operation gets information on the
+            network gateway for the specified vitrual network in Windows
+            Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154109.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.GetAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String)">
+            <summary>
+            The Get Virtual network Gateway operation gets information on the
+            network gateway for the specified vitrual network in Windows
+            Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154109.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.GetDeviceConfigurationScript(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetDeviceConfigurationScriptParameters)">
+            <summary>
+            The Get Device Configuration Script operation returns a script that
+            you can use to configure local VPN devices to connect to the
+            gateway.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154115.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='parameters'>
+            The parameters for the GetDeviceConfigurationScript request
+            </param>
+            <returns>
+            The configuration script returned from the get device configuration
+            script request
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.GetDeviceConfigurationScriptAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetDeviceConfigurationScriptParameters)">
+            <summary>
+            The Get Device Configuration Script operation returns a script that
+            you can use to configure local VPN devices to connect to the
+            gateway.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154115.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='parameters'>
+            The parameters for the GetDeviceConfigurationScript request
+            </param>
+            <returns>
+            The configuration script returned from the get device configuration
+            script request
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.GetOperationStatus(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String)">
+            <summary>
+            The Get Virtual network Gateway operation status gets information
+            on the status of network gateway operations in Windows Azure.
+            (see http://msdn.microsoft.com/en-us/library/windowsazure/jj154112.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='operationId'>
+            The id  of the virtualnetwork operation
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.GetOperationStatusAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String)">
+            <summary>
+            The Get Virtual network Gateway operation status gets information
+            on the status of network gateway operations in Windows Azure.
+            (see http://msdn.microsoft.com/en-us/library/windowsazure/jj154112.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='operationId'>
+            The id  of the virtualnetwork operation
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.GetSharedKey(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String,System.String)">
+            <summary>
+            The Get Virtual network Gateway shared key operation gets the
+            shared key on the virtual network gateway for the specified
+            vitrual network connection to the specified local network in
+            Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154122.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='localNetworkName'>
+            The name of the local network
+            </param>
+            <returns>
+            The response to the get shared key request
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.GetSharedKeyAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String,System.String)">
+            <summary>
+            The Get Virtual network Gateway shared key operation gets the
+            shared key on the virtual network gateway for the specified
+            vitrual network connection to the specified local network in
+            Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154122.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='localNetworkName'>
+            The name of the local network
+            </param>
+            <returns>
+            The response to the get shared key request
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.ListConnections(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String)">
+            <summary>
+            The List Connections operation returns a list of the local network
+            connections that can be accessed through the gateway.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154120.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <returns>
+            The response to a ListConnections request to a Virtual Network
+            Gateway
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.ListConnectionsAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String)">
+            <summary>
+            The List Connections operation returns a list of the local network
+            connections that can be accessed through the gateway.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154120.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <returns>
+            The response to a ListConnections request to a Virtual Network
+            Gateway
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.ListSupportedDevices(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations)">
+            <summary>
+            The List Virtual Network Gateway Supported Devices operation lists
+            the supported, on-premise network devices that can connect to the
+            gateway.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154102.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <returns>
+            The respoonse to the get supported platform configuration request
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.ListSupportedDevicesAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations)">
+            <summary>
+            The List Virtual Network Gateway Supported Devices operation lists
+            the supported, on-premise network devices that can connect to the
+            gateway.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154102.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <returns>
+            The respoonse to the get supported platform configuration request
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.BeginResetSharedKey(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayResetSharedKeyParameters)">
+            <summary>
+            The Reset Virtual network Gateway shared key operation resets the
+            shared key on the virtual network gateway for the specified
+            vitrual network connection to the specified local network in
+            Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154114.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='localNetworkName'>
+            The name of the local network
+            </param>
+            <param name='parameters'>
+            The parameters to the Virtual Network Gateway Reset Shared Key
+            request
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.BeginResetSharedKeyAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayResetSharedKeyParameters)">
+            <summary>
+            The Reset Virtual network Gateway shared key operation resets the
+            shared key on the virtual network gateway for the specified
+            vitrual network connection to the specified local network in
+            Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154114.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='localNetworkName'>
+            The name of the local network
+            </param>
+            <param name='parameters'>
+            The parameters to the Virtual Network Gateway Reset Shared Key
+            request
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.ResetSharedKey(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayResetSharedKeyParameters)">
+            <summary>
+            The Reset Virtual network Gateway shared key operation resets the
+            shared key on the virtual network gateway for the specified
+            vitrual network connection to the specified local network in
+            Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154114.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='localNetworkName'>
+            The name of the local network
+            </param>
+            <param name='parameters'>
+            The parameters to the Virtual Network Gateway Reset Shared Key
+            request
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperationsExtensions.ResetSharedKeyAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations,System.String,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayResetSharedKeyParameters)">
+            <summary>
+            The Reset Virtual network Gateway shared key operation resets the
+            shared key on the virtual network gateway for the specified
+            vitrual network connection to the specified local network in
+            Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154114.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.IGatewayOperations.
+            </param>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='localNetworkName'>
+            The name of the local network
+            </param>
+            <param name='parameters'>
+            The parameters to the Virtual Network Gateway Reset Shared Key
+            request
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperations.#ctor(Microsoft.WindowsAzure.Management.VirtualNetworks.VirtualNetworkManagementClient)">
+            <summary>
+            Initializes a new instance of the GatewayOperations class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperations.BeginConnectDisconnectOrTestingAsync(System.String,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayConnectDisconnectOrTestParameters,System.Threading.CancellationToken)">
+            <summary>
+            To connect to, disconnect from, or test your connection to a local
+            network site, access the connection resource representing the
+            local network and specify Connect, Disconnect or Test to perform
+            the desired operation.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154107.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='localNetworkSiteName'>
+            The name of the site to connect to
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Virtual Network Gateway operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperations.ConnectDisconnectOrTestAsync(System.String,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayConnectDisconnectOrTestParameters,System.Threading.CancellationToken)">
+            <summary>
+            To connect to, disconnect from, or test your connection to a local
+            network site, access the connection resource representing the
+            local network and specify Connect, Disconnect or Test to perform
+            the desired operation.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154107.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='localNetworkSiteName'>
+            The name of the site to connect to
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Virtual Network Gateway operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperations.BeginCreatingAsync(System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayCreateParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Create Virtual network Gateway operation creates a new network
+            gateways account in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154119.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Virtual Network Gateway operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperations.CreateAsync(System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayCreateParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Create Virtual network Gateway operation creates a new network
+            gateways account in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154119.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Virtual Network Gateway operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperations.BeginDeletingAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Delete Virtual network Gateway operation deletes a network
+            gateway for the specified virtual network in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154129.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperations.DeleteAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Delete Virtual network Gateway operation deletes a network
+            gateway for the specified virtual network in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154129.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperations.BeginFailoverAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Failover Virtual network Gateway operation causes a network
+            gateway failover for the specified virtual network in Windows
+            Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154118.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network in Azure.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperations.FailoverAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Failover Virtual network Gateway operation causes a network
+            gateway failover for the specified virtual network in Windows
+            Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154118.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network in Azure.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperations.GenerateVpnClientPackageAsync(System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGenerateVpnClientPackageParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Generate VPN Client Package creates a VPN client package for
+            the specified virtual network and gateway in Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/dn205126.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='parameters'>
+            Parameters supplied to the Create Virtual Network Gateway operation.
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperations.GetAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Get Virtual network Gateway operation gets information on the
+            network gateway for the specified vitrual network in Windows
+            Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154109.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperations.GetDeviceConfigurationScriptAsync(System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayGetDeviceConfigurationScriptParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Get Device Configuration Script operation returns a script that
+            you can use to configure local VPN devices to connect to the
+            gateway.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154115.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='parameters'>
+            The parameters for the GetDeviceConfigurationScript request
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The configuration script returned from the get device configuration
+            script request
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperations.GetOperationStatusAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Get Virtual network Gateway operation status gets information
+            on the status of network gateway operations in Windows Azure.
+            (see http://msdn.microsoft.com/en-us/library/windowsazure/jj154112.aspx
+            for more information)
+            </summary>
+            <param name='operationId'>
+            The id  of the virtualnetwork operation
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperations.GetSharedKeyAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            The Get Virtual network Gateway shared key operation gets the
+            shared key on the virtual network gateway for the specified
+            vitrual network connection to the specified local network in
+            Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154122.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='localNetworkName'>
+            The name of the local network
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response to the get shared key request
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperations.ListConnectionsAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The List Connections operation returns a list of the local network
+            connections that can be accessed through the gateway.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154120.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response to a ListConnections request to a Virtual Network
+            Gateway
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperations.ListSupportedDevicesAsync(System.Threading.CancellationToken)">
+            <summary>
+            The List Virtual Network Gateway Supported Devices operation lists
+            the supported, on-premise network devices that can connect to the
+            gateway.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154102.aspx
+            for more information)
+            </summary>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The respoonse to the get supported platform configuration request
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperations.BeginResetSharedKeyAsync(System.String,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayResetSharedKeyParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Reset Virtual network Gateway shared key operation resets the
+            shared key on the virtual network gateway for the specified
+            vitrual network connection to the specified local network in
+            Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154114.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='localNetworkName'>
+            The name of the local network
+            </param>
+            <param name='parameters'>
+            The parameters to the Virtual Network Gateway Reset Shared Key
+            request
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperations.ResetSharedKeyAsync(System.String,System.String,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.GatewayResetSharedKeyParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Reset Virtual network Gateway shared key operation resets the
+            shared key on the virtual network gateway for the specified
+            vitrual network connection to the specified local network in
+            Windows Azure.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj154114.aspx
+            for more information)
+            </summary>
+            <param name='virtualNetworkName'>
+            The name of the virtual network for this gateway
+            </param>
+            <param name='localNetworkName'>
+            The name of the local network
+            </param>
+            <param name='parameters'>
+            The parameters to the Virtual Network Gateway Reset Shared Key
+            request
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.GatewayOperations.Client">
+            <summary>
+            Gets a reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.VirtualNetworkManagementClient.
+            </summary>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.INetworkOperations.GetConfigurationAsync(System.Threading.CancellationToken)">
+            <summary>
+            The Get Network Configuration operation retrieves the network
+            configuration file for the given subscription.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj157196.aspx
+            for more information)
+            </summary>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The Get Network Configuration operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.INetworkOperations.ListAsync(System.Threading.CancellationToken)">
+            <summary>
+            The List Virtual network sites operation retrieves the virtual
+            networks configured for the subscription.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj157185.aspx
+            for more information)
+            </summary>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response structure for the Server List operation
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.INetworkOperations.BeginSettingConfigurationAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkSetConfigurationParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Set Network Configuration operation asynchronously configures
+            the virtual network  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj157181.aspx
+            for more information)
+            </summary>
+            <param name='parameters'>
+            The updated network configuration
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.INetworkOperations.SetConfigurationAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkSetConfigurationParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Set Network Configuration operation asynchronously configures
+            the virtual network  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj157181.aspx
+            for more information)
+            </summary>
+            <param name='parameters'>
+            The updated network configuration
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.NetworkOperationsExtensions.GetConfiguration(Microsoft.WindowsAzure.Management.VirtualNetworks.INetworkOperations)">
+            <summary>
+            The Get Network Configuration operation retrieves the network
+            configuration file for the given subscription.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj157196.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.INetworkOperations.
+            </param>
+            <returns>
+            The Get Network Configuration operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.NetworkOperationsExtensions.GetConfigurationAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.INetworkOperations)">
+            <summary>
+            The Get Network Configuration operation retrieves the network
+            configuration file for the given subscription.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj157196.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.INetworkOperations.
+            </param>
+            <returns>
+            The Get Network Configuration operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.NetworkOperationsExtensions.List(Microsoft.WindowsAzure.Management.VirtualNetworks.INetworkOperations)">
+            <summary>
+            The List Virtual network sites operation retrieves the virtual
+            networks configured for the subscription.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj157185.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.INetworkOperations.
+            </param>
+            <returns>
+            The response structure for the Server List operation
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.NetworkOperationsExtensions.ListAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.INetworkOperations)">
+            <summary>
+            The List Virtual network sites operation retrieves the virtual
+            networks configured for the subscription.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj157185.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.INetworkOperations.
+            </param>
+            <returns>
+            The response structure for the Server List operation
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.NetworkOperationsExtensions.BeginSettingConfiguration(Microsoft.WindowsAzure.Management.VirtualNetworks.INetworkOperations,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkSetConfigurationParameters)">
+            <summary>
+            The Set Network Configuration operation asynchronously configures
+            the virtual network  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj157181.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.INetworkOperations.
+            </param>
+            <param name='parameters'>
+            The updated network configuration
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.NetworkOperationsExtensions.BeginSettingConfigurationAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.INetworkOperations,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkSetConfigurationParameters)">
+            <summary>
+            The Set Network Configuration operation asynchronously configures
+            the virtual network  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj157181.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.INetworkOperations.
+            </param>
+            <param name='parameters'>
+            The updated network configuration
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.NetworkOperationsExtensions.SetConfiguration(Microsoft.WindowsAzure.Management.VirtualNetworks.INetworkOperations,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkSetConfigurationParameters)">
+            <summary>
+            The Set Network Configuration operation asynchronously configures
+            the virtual network  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj157181.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.INetworkOperations.
+            </param>
+            <param name='parameters'>
+            The updated network configuration
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.NetworkOperationsExtensions.SetConfigurationAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.INetworkOperations,Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkSetConfigurationParameters)">
+            <summary>
+            The Set Network Configuration operation asynchronously configures
+            the virtual network  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj157181.aspx
+            for more information)
+            </summary>
+            <param name='operations'>
+            Reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.INetworkOperations.
+            </param>
+            <param name='parameters'>
+            The updated network configuration
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.NetworkOperations.#ctor(Microsoft.WindowsAzure.Management.VirtualNetworks.VirtualNetworkManagementClient)">
+            <summary>
+            Initializes a new instance of the NetworkOperations class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.NetworkOperations.GetConfigurationAsync(System.Threading.CancellationToken)">
+            <summary>
+            The Get Network Configuration operation retrieves the network
+            configuration file for the given subscription.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj157196.aspx
+            for more information)
+            </summary>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The Get Network Configuration operation response.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.NetworkOperations.ListAsync(System.Threading.CancellationToken)">
+            <summary>
+            The List Virtual network sites operation retrieves the virtual
+            networks configured for the subscription.  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj157185.aspx
+            for more information)
+            </summary>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response structure for the Server List operation
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.NetworkOperations.BeginSettingConfigurationAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkSetConfigurationParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Set Network Configuration operation asynchronously configures
+            the virtual network  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj157181.aspx
+            for more information)
+            </summary>
+            <param name='parameters'>
+            The updated network configuration
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            A standard storage response including an HTTP status code and
+            request ID.
+            </returns>
+        </member>
+        <member name="M:Microsoft.WindowsAzure.Management.VirtualNetworks.NetworkOperations.SetConfigurationAsync(Microsoft.WindowsAzure.Management.VirtualNetworks.Models.NetworkSetConfigurationParameters,System.Threading.CancellationToken)">
+            <summary>
+            The Set Network Configuration operation asynchronously configures
+            the virtual network  (see
+            http://msdn.microsoft.com/en-us/library/windowsazure/jj157181.aspx
+            for more information)
+            </summary>
+            <param name='parameters'>
+            The updated network configuration
+            </param>
+            <param name='cancellationToken'>
+            Cancellation token.
+            </param>
+            <returns>
+            The response body contains the status of the specified asynchronous
+            operation, indicating whether it has succeeded, is inprogress, or
+            has failed. Note that this status is distinct from the HTTP status
+            code returned for the Get Operation Status operation itself.  If
+            the asynchronous operation succeeded, the response body includes
+            the HTTP status code for the successful request.  If the
+            asynchronous operation failed, the response body includes the HTTP
+            status code for the failed request, and also includes error
+            information regarding the failure.
+            </returns>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Management.VirtualNetworks.NetworkOperations.Client">
+            <summary>
+            Gets a reference to the
+            Microsoft.WindowsAzure.Management.VirtualNetworks.VirtualNetworkManagementClient.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
+  <metadata minClientVersion="2.5">
+    <id>Microsoft.WindowsAzure.Common.Dependencies</id>
+    <version>0.9.0-preview</version>
+    <title>Windows Azure Common Library Dependencies</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://go.microsoft.com/fwlink/?LinkId=235170</licenseUrl>
+    <projectUrl>https://github.com/WindowsAzure/azure-sdk-for-net</projectUrl>
+    <iconUrl>http://go.microsoft.com/fwlink/?LinkID=288890</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Provides popular portable components for a common HTTP pipeline and JSON parsing. This package is included as a dependency to other libraries such as the Windows Azure Management Libraries and should not be directly added to your project.</description>
+    <summary>Provides popular portable components for a common HTTP pipeline and JSON parsing. This package is included as a dependency to other libraries such as the Windows Azure Management Libraries and should not be directly added to your project.</summary>
+    <releaseNotes>PREVIEW RELEASE</releaseNotes>
+    <copyright>Copyright © Microsoft Corporation</copyright>
+    <tags>windowsazureofficial</tags>
+    <dependencies>
+      <group targetFramework=".NETPortable0.0-net45+sl50+wp80+win">
+        <dependency id="Microsoft.Bcl" version="1.1.3" />
+        <dependency id="Microsoft.Bcl.Async" version="1.0.16" />
+        <dependency id="Microsoft.Bcl.Build" version="1.0.10" />
+        <dependency id="Microsoft.Net.Http" version="2.2.15" />
+        <dependency id="Newtonsoft.Json" version="5.0.6" />
+      </group>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="Microsoft.Bcl" version="1.1.3" />
+        <dependency id="Microsoft.Bcl.Async" version="1.0.16" />
+        <dependency id="Microsoft.Bcl.Build" version="1.0.10" />
+        <dependency id="Microsoft.Net.Http" version="2.2.15" />
+        <dependency id="Newtonsoft.Json" version="5.0.6" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EarzyWeb", "EarzyWeb\EarzyWeb.csproj", "{85577B7E-4676-418D-A893-1C13396ACD31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EarzyWeb.Tests", "EarzyWeb.Tests\EarzyWeb.Tests.csproj", "{E73AF005-416F-47DC-99C5-9620DE7455F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EarzyUploader", "EarzyUploader\EarzyUploader.csproj", "{EF9E908A-F2F1-457B-B62F-D381603AF2EE}"
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "EarzyServices", "EarzyServices\EarzyServices.ccproj", "{751560B4-2507-4135-A94B-8FF226A8D5EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EarzyImporter", "EarzyImporter\EarzyImporter.csproj", "{7F8011AD-515A-43B5-9F4D-2DE68225E6B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EarzyProvisioning", "EarzyProvisioning\EarzyProvisioning.csproj", "{52FE2DCB-B2C5-420B-A1F9-038FF8ACE793}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://cloudcompanion.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = EarzyWeb.Tests\\EarzyWeb.Tests.csproj
+		SccProjectName1 = EarzyWeb.Tests
+		SccLocalPath1 = EarzyWeb.Tests
+		SccProjectUniqueName2 = EarzyWeb\\EarzyWeb.csproj
+		SccProjectName2 = EarzyWeb
+		SccLocalPath2 = EarzyWeb
+		SccProjectUniqueName3 = EarzyUploader\\EarzyUploader.csproj
+		SccProjectName3 = EarzyUploader
+		SccLocalPath3 = EarzyUploader
+		SccProjectUniqueName4 = EarzyServices\\EarzyServices.ccproj
+		SccProjectName4 = EarzyServices
+		SccLocalPath4 = EarzyServices
+		SccProjectUniqueName5 = EarzyImporter\\EarzyImporter.csproj
+		SccProjectName5 = EarzyImporter
+		SccLocalPath5 = EarzyImporter
+		SccProjectUniqueName6 = EarzyProvisioning\\EarzyProvisioning.csproj
+		SccProjectName6 = EarzyProvisioning
+		SccLocalPath6 = EarzyProvisioning
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85577B7E-4676-418D-A893-1C13396ACD31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85577B7E-4676-418D-A893-1C13396ACD31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85577B7E-4676-418D-A893-1C13396ACD31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85577B7E-4676-418D-A893-1C13396ACD31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E73AF005-416F-47DC-99C5-9620DE7455F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E73AF005-416F-47DC-99C5-9620DE7455F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E73AF005-416F-47DC-99C5-9620DE7455F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E73AF005-416F-47DC-99C5-9620DE7455F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF9E908A-F2F1-457B-B62F-D381603AF2EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF9E908A-F2F1-457B-B62F-D381603AF2EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF9E908A-F2F1-457B-B62F-D381603AF2EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF9E908A-F2F1-457B-B62F-D381603AF2EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{751560B4-2507-4135-A94B-8FF226A8D5EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{751560B4-2507-4135-A94B-8FF226A8D5EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{751560B4-2507-4135-A94B-8FF226A8D5EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{751560B4-2507-4135-A94B-8FF226A8D5EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F8011AD-515A-43B5-9F4D-2DE68225E6B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F8011AD-515A-43B5-9F4D-2DE68225E6B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F8011AD-515A-43B5-9F4D-2DE68225E6B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F8011AD-515A-43B5-9F4D-2DE68225E6B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52FE2DCB-B2C5-420B-A1F9-038FF8ACE793}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52FE2DCB-B2C5-420B-A1F9-038FF8ACE793}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52FE2DCB-B2C5-420B-A1F9-038FF8ACE793}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52FE2DCB-B2C5-420B-A1F9-038FF8ACE793}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

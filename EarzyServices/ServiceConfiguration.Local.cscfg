@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="EarzyServices" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="3" osVersion="*" schemaVersion="2013-10.2.2">
+  <Role name="EarzyImporter">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=databasedr;AccountKey=vZi6Guqmio2gscinj0HcOcxbsgi6jRkxrSEHslYdb9YA38xWU1vqkrRtBNhUoWbhWJx5usdwfsOk21gfnmH/HA==" />
+      <Setting name="Microsoft.ServiceBus.ConnectionString" value="Endpoint=sb://[your namespace].servicebus.windows.net;SharedSecretIssuer=owner;SharedSecretValue=[your secret]" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="cloudcompanion" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCED2PKMZ2Vv+uRGT83f8kQZAwDQYJKoZIhvcNAQEBBQAEggEAPQAdrvmK6ZRoiEkIvGGbvhSjjscPpUFVtRckyMMa2mPGEiWWM1QcsGLmOQ23zqO4UZznA2XsbXf6oMy4Lpk8NTqg4og9ufuqA9xSKNNO169Xud6fcLU7RY8G620hEIRYERQPFl0LwsYQS+eFmHoQHPinZxrVi2ObL8hCVGbcv3+q2NXqmscsJvuz/b+2TZR/GjTdWgQYGS8I0TtNc7stMuwo18aL/g6TowlcRaWs05tw4qSVWXafFHtWDpAyXbxijieDaqlxfZrauoIvNdho738NM/9v4h169uvDZ4OqgprrTp2toxdz4HxEUA6wKOqCLrUOtwuY4TVsg3UDP71xhTAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECF6BywXQbdPzgBACe5onF1XECX8LIROBd+Ed" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2014-11-05T23:59:59.0000000+00:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="7A30C3C27A3BEFBF34FB788305DD63EAAEBC9C64" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>
