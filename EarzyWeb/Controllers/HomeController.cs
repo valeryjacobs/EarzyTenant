@@ -91,6 +91,7 @@ namespace EarzyWeb.Controllers
                     try
                     {
                         var blockList = Enumerable.Range(1, (int)model.BlockCount).ToList<int>().ConvertAll(rangeElement => Convert.ToBase64String(Encoding.UTF8.GetBytes(string.Format(CultureInfo.InvariantCulture, "{0:D4}", rangeElement))));
+                        model.BlockBlob.Properties.ContentType = "audio/mpeg3";
                         model.BlockBlob.PutBlockList(blockList);
                         var duration = DateTime.Now - model.StartTime;
                         float fileSizeInKb = model.FileSize / Constants.BytesPerKb;

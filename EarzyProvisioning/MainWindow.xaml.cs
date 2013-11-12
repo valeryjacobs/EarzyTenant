@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,9 @@ namespace EarzyProvisioning
     public partial class MainWindow : Window
     {
         EarzyProvisioningCore _earzyProvisioningCore;
+        string _tenantName;
+        string _accountId;
+        string _siteName;
         public MainWindow()
         {
             InitializeComponent();
@@ -30,8 +34,18 @@ namespace EarzyProvisioning
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-          
-           await _earzyProvisioningCore.CreateEarzyForTenant(tenantBox.Text.Replace(" ", ""));
+            _tenantName = tenantBox.Text.Replace(" ", "");
+            _accountId = Guid.NewGuid().ToString();
+            _siteName = "EarzyFor" + _tenantName;
+            await _earzyProvisioningCore.CreateEarzyForTenantSTEPA(_tenantName, _siteName, _accountId);
+
+            Process.Start(@"C:\Windows\System32\WindowsPowerShell\v1.0\powershell_ise.exe", string.Format(@"C:\\TopSecret\\TenantScript{0}.ps1", _siteName));
+        }
+
+        private async void Button_ClickB(object sender, RoutedEventArgs e)
+        {
+            if (_tenantName != null && _siteName != null && _siteName != null)
+                await _earzyProvisioningCore.CreateEarzyForTenantSTEPB(_tenantName, _siteName, _accountId);
         }
     }
 }

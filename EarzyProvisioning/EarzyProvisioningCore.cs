@@ -25,6 +25,8 @@ namespace EarzyProvisioning
         private ComputeManagementClient _computeManagementClient;
         private WebSiteManagementClient _webSitesManagementClient;
 
+        const string _webspaceName = "westeuropewebspace";
+
         #region Construct
 
         public EarzyProvisioningCore()
@@ -45,15 +47,9 @@ namespace EarzyProvisioning
         #region Methods
 
         //Create an instance of the Earzy App for a tenant.
-        internal async Task CreateEarzyForTenant(string tenantName)
+        internal async Task CreateEarzyForTenantSTEPA(string tenantName,string siteName, string accountId)
         {
-            const string webspaceName = "westeuropewebspace";
-            var AccountID = Guid.NewGuid().ToString();
-            var name = "EarzyFor" + tenantName;
-
-            await CreateStorageAccount(LocationNames.WestEurope, name.ToLower());
-
-            var storageConnectionString = await GetStorageAccountConnectionString(name.ToLower());
+            await CreateStorageAccount(LocationNames.WestEurope, siteName.ToLower());
 
             //Create web site
             //var response = await _webSitesManagementClient.WebSites.CreateAsync(webspaceName,
@@ -67,20 +63,25 @@ namespace EarzyProvisioning
             //    });
 
             PsAdapter psa = new PsAdapter();
-            psa.CreateEarzyTenantWebsite(name);
+            psa.CreateEarzyTenantWebsite(siteName);
 
             //var r2 = await _webSitesManagementClient.WebSites.CreateRepositoryAsync(webspaceName, name);
+        }
 
-            Dictionary<string,string> appSettings = new Dictionary<string,string>();
-            appSettings.Add("AccountId",AccountID);
-            appSettings.Add("StorageConnectionString",storageConnectionString);
+        internal async Task CreateEarzyForTenantSTEPB(string tenantName, string siteName,string accountId)
+        {
+            var storageConnectionString = await GetStorageAccountConnectionString(siteName.ToLower());
+
+            Dictionary<string, string> appSettings = new Dictionary<string, string>();
+            appSettings.Add("AccountId", accountId);
+            appSettings.Add("StorageConnectionString", storageConnectionString);
             appSettings.Add("TenantName", tenantName);
 
-            await _webSitesManagementClient.WebSites.UpdateConfigurationAsync(webspaceName, name, new WebSiteUpdateConfigurationParameters
-                {
-                    AppSettings = appSettings
-                    
-                });
+            await _webSitesManagementClient.WebSites.UpdateConfigurationAsync(_webspaceName, siteName, new WebSiteUpdateConfigurationParameters
+            {
+                AppSettings = appSettings
+
+            });
         }
 
         internal async Task CreateStorageAccount(string region, string storageAccountName)
