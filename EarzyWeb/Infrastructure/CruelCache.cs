@@ -44,7 +44,7 @@ namespace EarzyWeb.Infrastructure
             Container = Account.CreateCloudBlobClient().GetContainerReference(Constants.ContainerName);
 
             BlobContainerPermissions blobPermissions = new BlobContainerPermissions();
-            blobPermissions.SharedAccessPolicies.Add(Constants.AccountId, new SharedAccessBlobPolicy()
+            blobPermissions.SharedAccessPolicies.Add(ConfigurationManager.AppSettings["AccountId"], new SharedAccessBlobPolicy()
             {
                 SharedAccessExpiryTime = DateTime.UtcNow.AddHours(10),
                 Permissions = SharedAccessBlobPermissions.Write |
@@ -55,7 +55,7 @@ namespace EarzyWeb.Infrastructure
             // Set the permission policy on the container.
             Container.SetPermissions(blobPermissions);
 
-            SasToken = Container.GetSharedAccessSignature(new SharedAccessBlobPolicy(), Constants.AccountId);
+            SasToken = Container.GetSharedAccessSignature(new SharedAccessBlobPolicy(), ConfigurationManager.AppSettings["AccountId"]);
 
             BlobBaseUri = Account.BlobEndpoint;
         }

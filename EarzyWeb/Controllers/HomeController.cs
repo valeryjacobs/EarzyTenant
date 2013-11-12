@@ -116,7 +116,7 @@ namespace EarzyWeb.Controllers
                             {
                                 var track = new Track
                                 {
-                                    PartitionKey = Constants.AccountId,
+                                    PartitionKey = ConfigurationManager.AppSettings["AccountId"],
                                     RowKey = (DateTime.MaxValue.Ticks - DateTime.Now.Ticks).ToString(),
                                     Id = fileId,
                                     OriginalFileName = model.FileName,

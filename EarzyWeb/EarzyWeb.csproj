@@ -237,6 +237,7 @@
     <None Include="Properties\PublishProfiles\earzy - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\earzy.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\earzy.js" />
     <Content Include="Scripts\foundation.min.js" />
     <Content Include="Scripts\foundation\foundation.abide.js" />
     <Content Include="Scripts\foundation\foundation.alerts.js" />

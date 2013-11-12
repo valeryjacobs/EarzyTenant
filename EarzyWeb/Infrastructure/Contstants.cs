@@ -26,7 +26,5 @@ namespace EarzyWeb.Infrastructure
         /// Name of session element where attributes of file to be uploaded are saved.
         /// </summary>
         internal const string FileAttributesSession = "FileClientAttributes";
-
-        internal const string AccountId = "32886274-10fa-4356-824a-f29adbeac4e4";
     }
 }

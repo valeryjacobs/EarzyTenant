@@ -30,6 +30,7 @@ namespace EarzyProvisioning
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
+          
            await _earzyProvisioningCore.CreateEarzyForTenant(tenantBox.Text.Replace(" ", ""));
         }
     }

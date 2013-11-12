@@ -67,7 +67,7 @@ namespace EarzyWeb.Controllers
         public string GetFreshData()
         {
             CruelCache.Instance.LastUpdate = DateTime.Now.AddHours(-2);
-            return "Done";
+            return ConfigurationManager.AppSettings["AccountId"];
         }
 
 
@@ -81,7 +81,7 @@ namespace EarzyWeb.Controllers
         private IEnumerable<Track> QueryTable()
         {
             CloudTable table = CruelCache.Instance.TableClient.GetTableReference("tracks");
-            TableQuery<Track> query = new TableQuery<Track>().Where(TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, Constants.AccountId));
+            TableQuery<Track> query = new TableQuery<Track>().Where(TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, ConfigurationManager.AppSettings["AccountId"]));
 
             var queryResult = table.ExecuteQuery(query);
 

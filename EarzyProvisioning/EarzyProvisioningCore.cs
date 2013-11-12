@@ -5,11 +5,13 @@ using Microsoft.WindowsAzure.Management.Storage;
 using Microsoft.WindowsAzure.Management.Storage.Models;
 using Microsoft.WindowsAzure.Management.WebSites;
 using Microsoft.WindowsAzure.Management.WebSites.Models;
+using Octokit;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Globalization;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -45,30 +47,40 @@ namespace EarzyProvisioning
         //Create an instance of the Earzy App for a tenant.
         internal async Task CreateEarzyForTenant(string tenantName)
         {
-            var xx = _webSitesManagementClient.WebSpaces.List();
-
+            const string webspaceName = "westeuropewebspace";
             var AccountID = Guid.NewGuid().ToString();
             var name = "EarzyFor" + tenantName;
-            //Create 
-            //var response = await _webSitesManagementClient.WebSites.CreateAsync("westeuropewebspace"
-            //   ,
+
+            await CreateStorageAccount(LocationNames.WestEurope, name.ToLower());
+
+            var storageConnectionString = await GetStorageAccountConnectionString(name.ToLower());
+
+            //Create web site
+            //var response = await _webSitesManagementClient.WebSites.CreateAsync(webspaceName,
             //    new WebSiteCreateParameters
             //    {
             //        ComputeMode = WebSiteComputeMode.Shared,
             //        Name = name,
             //        SiteMode = WebSiteMode.Limited,
             //        HostNames = { name + ".azurewebsites.net" },
-            //        WebSpaceName = "westeuropewebspace"
-            //    }
-            //    );
+            //        WebSpaceName = webspaceName,
+            //    });
 
+            PsAdapter psa = new PsAdapter();
+            psa.CreateEarzyTenantWebsite(name);
 
+            //var r2 = await _webSitesManagementClient.WebSites.CreateRepositoryAsync(webspaceName, name);
 
-            //var x = response.WebSite.RepositorySiteName;
+            Dictionary<string,string> appSettings = new Dictionary<string,string>();
+            appSettings.Add("AccountId",AccountID);
+            appSettings.Add("StorageConnectionString",storageConnectionString);
+            appSettings.Add("TenantName", tenantName);
 
-            var response2 = await _webSitesManagementClient.WebSites.GetRepositoryAsync("westeuropewebspace", name);
-
-            var uri = response2.Uri;
+            await _webSitesManagementClient.WebSites.UpdateConfigurationAsync(webspaceName, name, new WebSiteUpdateConfigurationParameters
+                {
+                    AppSettings = appSettings
+                    
+                });
         }
 
         internal async Task CreateStorageAccount(string region, string storageAccountName)
