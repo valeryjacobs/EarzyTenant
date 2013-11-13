@@ -15,6 +15,7 @@ using System.Globalization;
 using EarzyWeb.Infrastructure;
 using Microsoft.WindowsAzure;
 using Microsoft.WindowsAzure.Storage.Table;
+using System.Diagnostics;
 
 namespace EarzyWeb.Controllers
 {
@@ -35,6 +36,7 @@ namespace EarzyWeb.Controllers
         [HttpPost]
         public ActionResult PrepareMetadata(int blocksCount, string fileName, long fileSize)
         {
+            Trace.TraceInformation("Preparing file upload.");
             var container = CloudStorageAccount.Parse(ConfigurationManager.AppSettings[Constants.ConfigurationSectionKey]).CreateCloudBlobClient().GetContainerReference(Constants.ContainerName);
             container.CreateIfNotExists();
             var fileToUpload = new FileUploadModel()
@@ -138,36 +140,33 @@ namespace EarzyWeb.Controllers
                                     if (int.TryParse(id3.Year, out year))
                                         track.Year = year;
                                 }
-                                catch
+                                catch (Exception ex)
                                 {
                                     track.Title = model.FileName;
                                 }
 
-                                if (track.Artist == null || track.Artist == "")
+                                if (track.Title == null || track.Title == "")
                                 {
                                     track.Title = Path.GetFileNameWithoutExtension(track.OriginalFileName);
-                                    if ((track.Album == null || track.Album == "") && new DirectoryInfo(track.OriginalFileName).Parent != null)
-                                    {
-                                        track.Album = new DirectoryInfo(track.OriginalFileName).Parent.Name;
-                                    }
-
-                                    if ((track.Artist == null || track.Artist == "") && new DirectoryInfo(track.OriginalFileName).Parent.Parent != null)
-                                        track.Artist = new DirectoryInfo(track.OriginalFileName).Parent.Parent.Name;
                                 }
 
                                 track.Blob = model.BlockBlob.Uri.AbsolutePath;
                                 TableOperation insertOperation = TableOperation.Insert(track);
                                 table.Execute(insertOperation);
-                            }
 
+                                Trace.TraceInformation(string.Format("File {0} uploaded.",track.OriginalFileName));
+                            }
                         }
-                        catch { }
+                        catch (Exception ex) {
+                            Trace.TraceInformation("Error uploading. " + ex.Message);
+                        }
 
                         model.UploadStatusMessage = string.Format(CultureInfo.CurrentCulture, "Upload completed", fileSizeMessage, duration.TotalSeconds);
                     }
                     catch (StorageException e)
                     {
                         model.UploadStatusMessage = string.Format(CultureInfo.CurrentCulture, "Upload failed", e.Message);
+                        Trace.TraceInformation("Upload failed: " + e.Message);
                         errorInOperation = true;
                     }
                     finally

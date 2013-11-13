@@ -4,6 +4,7 @@ using Microsoft.WindowsAzure.Storage.Table;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 
@@ -38,6 +39,7 @@ namespace EarzyWeb.Infrastructure
 
         private void Init()
         {
+            Trace.TraceInformation("Starting initialization.");
             Account = CloudStorageAccount.Parse(ConfigurationManager.AppSettings[Constants.ConfigurationSectionKey]);
             TableClient = Account.CreateCloudTableClient();
 
@@ -58,6 +60,7 @@ namespace EarzyWeb.Infrastructure
             SasToken = Container.GetSharedAccessSignature(new SharedAccessBlobPolicy(), ConfigurationManager.AppSettings["AccountId"]);
 
             BlobBaseUri = Account.BlobEndpoint;
+            Trace.TraceInformation("Initialization finished.");
         }
     }
 }

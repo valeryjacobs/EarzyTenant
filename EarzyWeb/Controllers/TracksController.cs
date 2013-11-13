@@ -10,6 +10,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.IO;
+using System.Diagnostics;
 
 namespace EarzyWeb.Controllers
 {
@@ -20,7 +21,9 @@ namespace EarzyWeb.Controllers
         {
             if (CruelCache.Instance.Store.ContainsKey("Tracks") && CruelCache.Instance.Store["Tracks"] != null && (CruelCache.Instance.LastUpdate.AddHours(1) > DateTime.Now))
             {
+                Trace.TraceInformation("Data retrieved from cache.");
                 return (List<PlayListItem>)CruelCache.Instance.Store["Tracks"];
+
             }
 
            
@@ -36,6 +39,8 @@ namespace EarzyWeb.Controllers
                 };
                 result.Add(playlistItem);
             }
+
+            Trace.TraceInformation("Data retrieved from storage.");
 
             CruelCache.Instance.Store["Tracks"] = result;
             CruelCache.Instance.LastUpdate = DateTime.Now;
@@ -66,6 +71,7 @@ namespace EarzyWeb.Controllers
 
         public string GetFreshData()
         {
+            Trace.TraceInformation("Data refresh request. Cache expired.");
             CruelCache.Instance.LastUpdate = DateTime.Now.AddHours(-2);
             return ConfigurationManager.AppSettings["AccountId"];
         }
